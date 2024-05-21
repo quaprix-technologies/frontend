@@ -18,7 +18,7 @@ export const Hero = () => {
           Efficient and cost-effective IT services for <br /> businesses of all sizes.
         </p>
       </div>
-      <button className="bottom-btn">Learn More</button>
+      <button className="bottom-btn">Get Started</button>
     </div>
   );
 };
