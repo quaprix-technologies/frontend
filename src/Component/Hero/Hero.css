@@ -1,0 +1,124 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the whole container */
+  z-index: -1; /* Place video behind text */
+}
+
+.text-wrap {
+  position: absolute;
+  z-index: 1; /* Ensure text is above video */
+  text-align: center;
+  width: 100%;
+  padding: 0 20px; /* Add some padding to prevent text from touching the edges */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.text-wrap h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.text-wrap p {
+  font-size: 1.5rem; 
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add some spacing from the paragraph */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.bottom-btn {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-btn:hover {
+  background-color: #000e3d;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .text-wrap h1 {
+    font-size: 3.5rem;
+  }
+
+  .text-wrap p {
+    font-size: 1.25rem;
+  }
+
+  .btn, .bottom-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-wrap h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-wrap p {
+    font-size: 1rem;
+  }
+
+  .btn, .bottom-btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-wrap h1 {
+    font-size: 2rem;
+  }
+
+  .text-wrap p {
+    font-size: 0.875rem;
+  }
+
+  .btn, .bottom-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
