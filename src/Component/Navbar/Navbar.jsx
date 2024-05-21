@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import Quaprix from "../../assets/quaprix.png";
 
 export const Navbar = () => {
+  const [sticky, setSticky] = useState(false); 
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 200 ? setSticky(true) : setSticky(false);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {
+        window.scrollY > 200 ? setSticky(true) : setSticky(false);
+      });
+    };
+  }, []); 
+
   return (
-    <header className="container">
+    <header className={`container ${sticky ? "dark-navbar" : ""}`}>
       <img className="logo" src={Quaprix} alt="" />
       <ul>
         <li>

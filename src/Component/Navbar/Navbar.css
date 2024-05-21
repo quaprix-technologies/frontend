@@ -1,9 +1,10 @@
+/* Header Styles */
 header {
   width: 100%;
   color: #fff;
-  padding: 4px 0;
+  padding: 10px 0;
   position: fixed;
-  top: 20px;
+  top: 0;
   left: 0;
   display: flex;
   align-items: center;
@@ -29,12 +30,36 @@ header ul li {
 }
 
 header ul li a {
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: font-size 0.3s;
 }
 
-header ul li:hover {
+header ul li a:hover {
   color: #000e3d;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 10px;
+  animation: increaseSize 3s;
+}
+
+@keyframes increaseSize {
+  0% {
+    font-size: 1.1rem;
+  }
+  50% {
+    font-size: 1.3rem;
+  }
+  100% {
+    font-size: 1.1rem;
+  }
+}
+
+header ul li a:hover + a {
+  animation: none; 
 }
 
 .container {
@@ -42,6 +67,13 @@ header ul li:hover {
   padding-right: 10%;
 }
 
+.dark-navbar {
+  background: #fff;
+  transition: 0.5s;
+  color: black;
+}
+
+/* Media Queries */
 @media (max-width: 1200px) {
   .container {
     padding-left: 2%;
