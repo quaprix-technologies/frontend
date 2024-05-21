@@ -11,19 +11,19 @@ import linkedinIcon from "../../assets/linkedin.png";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-section">
+    <footer className="footer container">
+      <div className="footer-section1">
         <div className="footer-logo">
-          <img src={logo} alt="Quaprix Header Logo" />
+          <img src={logo} className="logo-header" alt="Quaprix Header Logo" />
           <h3>Require assistance?</h3>
-          <button>Contact Us</button>
+          <button className="contact-button">Contact Us</button>
         </div>
       </div>
       <div className="footer-section">
-        <h4>Quick Links</h4>
+        <h4>QUICK LINKS</h4>
         <ul>
-          <li>
-            <a href="/about">Home</a>
+          <li> 
+            <a href="/home">Home</a>
           </li>
           <li>
             <a href="/services">Services</a>
@@ -43,51 +43,35 @@ export const Footer = () => {
         </ul>
       </div>
       <div className="footer-section">
-        <h4>Follow Us</h4>
+        <h4>FOLLOW US</h4>
         <ul className="social-icons">
           <li>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <img src={fbIcon} alt="Facebook" />
             </a>
           </li>
           <li>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <img src={twitterIcon} alt="Twitter" />
             </a>
           </li>
           <li>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <img src={instaIcon} alt="Instagram" />
             </a>
           </li>
           <li>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <img src={linkedinIcon} alt="LinkedIn" />
             </a>
           </li>
         </ul>
       </div>
-      <div className="footer-section">
+      <div className="footer-section2">
         <h4>Contact Us</h4>
         <address>
           <p>
-            <img src={locationIcon} alt="Location" />
+            <img src={locationIcon} className="location" alt="Location" />
             D-A-5, Veer Savarkar Block, Dayanand Colony, Shakarpur, New Delhi,
             Delhi, 110092
           </p>

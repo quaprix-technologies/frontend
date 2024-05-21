@@ -1,0 +1,149 @@
+.footer {
+  background-color: #eae8e8;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.footer-logo img {
+  max-width: 65%;
+  height: auto;
+}
+
+.footer-logo h3 {
+  font-size: 25px;
+}
+
+.footer-logo button {
+  background-color: #eae8e8;
+  border-radius: 25px;
+  border: solid;
+  cursor: pointer;
+  color: black;
+  padding: 15px 40px;    
+  margin-top: 40px;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.footer-logo button:hover {
+  background-color: #000e3d;
+  color: white;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 20px 5px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-section address {
+  font-style: normal;
+  line-height: 1.6;
+  color: #555;
+}
+
+.footer-section p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.footer-section img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.footer-section2 {
+  padding: 20px;
+  max-width: 300px;
+  top: 0;
+  margin: 0 auto 0 auto;
+}
+
+.footer-section2 h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.footer-section2 address {
+  font-style: normal;
+  line-height: 1.8;
+  color: #555;
+}
+
+.footer-section2 p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-section2 img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.footer-section2 .location {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.footer-section2 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-section2 a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-section {
+    flex: 1 0 100%;
+    margin-right: 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .footer-section2 {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .footer-section2 h4 {
+    padding-right: 150px;
+  }
+}
