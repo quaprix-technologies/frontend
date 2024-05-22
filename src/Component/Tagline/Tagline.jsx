@@ -12,6 +12,7 @@ export const Tagline = () => {
         Our responsibility
       </h1>
       <img className="points" src={points} alt="" />
+      <h1>Why us?</h1>
     </div>
   );
 };
