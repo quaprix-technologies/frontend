@@ -39,7 +39,7 @@ export const Details = () => {
         <a href="#" className="learn-more">Learn More</a>
       </div>
       <div className="button-container">
-        <button>Click Me</button>
+        <button>Contact Us</button>
       </div>
     </div>
   );
