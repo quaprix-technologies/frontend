@@ -63,7 +63,7 @@
 }
 
 .button-container {
-  padding-left: 45%;
+  text-align: center;
   margin-top: 20px;
 }
 
@@ -82,14 +82,41 @@
   background-color: #00186b;
 }
 
+@media (max-width: 1024px) {
+  .card {
+    width: calc(33.33% - 20px);
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     width: calc(50% - 20px);
+  }
+
+  .button-container button {
+    padding: 12px 36px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 690px) {
+  .card {
+    width: calc(100% - 20px);
+  }
+
+  .button-container button {
+    padding: 10px 30px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .card {
     width: calc(100% - 20px);
+  }
+
+  .button-container button {
+    padding: 8px 24px;
+    font-size: 14px;
   }
 }
