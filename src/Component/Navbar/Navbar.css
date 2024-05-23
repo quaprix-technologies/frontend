@@ -1,8 +1,7 @@
-/* Header Styles */
-header {
+nav {
   width: 100%;
   color: #fff;
-  padding: 10px 0;
+  padding: 4px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,92 +15,74 @@ header {
   width: 180px;
 }
 
-header ul {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-header ul li {
+nav ul li {
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-header ul li a {
-  font-weight: 600;
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  transition: font-size 0.3s;
-}
-
-header ul li a:hover {
-  color: #000e3d;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 10px;
-  animation: increaseSize 3s;
-}
-
-@keyframes increaseSize {
-  0% {
-    font-size: 1.1rem;
-  }
-  50% {
-    font-size: 1.3rem;
-  }
-  100% {
-    font-size: 1.1rem;
-  }
-}
-
-header ul li a:hover + a {
-  animation: none; 
+nav ul li a:hover {
+  color: #011555;
+  text-decoration: underline 2px;
+  transition: 0.4s ease-in;
 }
 
 .container {
-  padding-left: 2%;
+  padding-left: 5%;
   padding-right: 10%;
 }
 
 .dark-navbar {
   background: #fff;
-  transition: 0.5s;
-  color: black;
+  color: #000;
+  transition: 0.5s ease-in-out;
 }
 
-/* Media Queries */
-@media (max-width: 1200px) {
-  .container {
-    padding-left: 2%;
-    padding-right: 5%;
-  }
-
-  header ul li {
-    margin: 5px 15px;
-    font-size: 15px;
-  }
-
-  .logo {
-    width: 160px;
-  }
+.menu-icon {
+  display: none;
 }
 
-@media (max-width: 992px) {
-  .container {
-    padding-left: 2%;
-    padding-right: 4%;
-  }
-
-  header ul li {
-    margin: 5px 10px;
-    font-size: 14px;
-  }
-
+@media (max-width: 1000px) {
   .logo {
     width: 140px;
+  }
+  nav ul li {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  nav {
+    padding: 15px 0;
+    background: #fff;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: -1;
+    width: 200px;
+    padding-top: 70px;
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px 40px;
+    color: #000;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .hide-mobile-menu {
+    right: -200px;
   }
 }

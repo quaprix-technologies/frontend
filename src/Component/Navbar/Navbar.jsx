@@ -1,39 +1,59 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import Quaprix from "../../assets/quaprix.png";
+import quaprix from "../../assets/quaprix.png";
+import menu_icon from "../../assets/menu.png";
 
 export const Navbar = () => {
-  const [sticky, setSticky] = useState(false); 
+  const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.scrollY > 200 ? setSticky(true) : setSticky(false);
-    });
-
-    return () => {
-      window.removeEventListener("scroll", () => {
-        window.scrollY > 200 ? setSticky(true) : setSticky(false);
-      });
+    const handleScroll = () => {
+      window.scrollY > 60 ? setSticky(true) : setSticky(false);
     };
-  }, []); 
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const toggleMenu = () => {
+    setMobileMenu((prevMobileMenu) => !prevMobileMenu);
+  };
 
   return (
-    <header className={`container ${sticky ? "dark-navbar" : ""}`}>
-      <img className="logo" src={Quaprix} alt="" />
-      <ul>
-        <li>
-          <a href="#">Home</a>
+    <nav className={`container ${sticky ? "dark-navbar" : ""}`}>
+      <img className="logo" src={quaprix} alt="Image not found" />
+      <ul className={mobileMenu ? "show-mobile-menu" : "hide-mobile-menu"}>
+        <li className="active">
+          <a href="#Home" onClick={toggleMenu}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="#Service" onClick={toggleMenu}>
+            services
+          </a>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="#AboutUs" onClick={toggleMenu}>
+            About Us
+          </a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#ContactUS" onClick={toggleMenu}>
+            Contact Us
+          </a>
         </li>
+        <li></li>
       </ul>
-    </header>
+      <img
+        src={menu_icon}
+        alt="Menu icon"
+        className="menu-icon"
+        onClick={toggleMenu}
+      />
+    </nav>
   );
 };
