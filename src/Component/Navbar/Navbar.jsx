@@ -33,7 +33,7 @@ export const Navbar = () => {
         </li>
         <li>
           <a href="#Service" onClick={toggleMenu}>
-            services
+            Services
           </a>
         </li>
         <li>
