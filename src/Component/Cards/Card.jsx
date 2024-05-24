@@ -1,10 +1,10 @@
 import React from "react";
-import "./Details.css";
+import "./Card.css";
 import teams from "../../assets/group.png";
 import mortarboard from "../../assets/mortarboard.png";
 import tech from "../../assets/coding.png";
 
-export const Details = () => {
+export const Card = () => {
   return (
     <div className="details">
       <div className="card">
@@ -38,9 +38,9 @@ export const Details = () => {
         </p>
         <a href="#" className="learn-more">Learn More</a>
       </div>
-      <div className="button-container">
+      {/* <div className="button-container">
         <button>Contact Us</button>
-      </div>
+      </div> */}
     </div>
   );
 };
