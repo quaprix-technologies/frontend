@@ -4,6 +4,7 @@ import { Hero } from "./Component/Hero/Hero";
 import { Tagline } from "./Component/Tagline/Tagline";
 import { Footer } from "./Component/Footer/Footer";
 import { Card } from "./Component/Cards/Card";
+import ContactUs from "./Component/ContactUs/ContactUs";
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       <Hero />
       <Tagline />
       <Card/>
-      <Footer />
+     <Footer />
+      {/* <ContactUs/> */}
     </div>
   );
 };

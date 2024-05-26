@@ -6,17 +6,6 @@ import menu_icon from "../../assets/menu.png";
 export const Navbar = () => {
   const [sticky, setSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY > 60 ? setSticky(true) : setSticky(false);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = () => {
     setMobileMenu((prevMobileMenu) => !prevMobileMenu);
