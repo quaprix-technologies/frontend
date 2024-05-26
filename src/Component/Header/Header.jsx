@@ -4,7 +4,6 @@ import quaprix from "../../assets/quaprix.png";
 import menu_icon from "../../assets/menu.png";
 
 export const Header = () => {
-  const [sticky, setSticky] = useState(false);
 
   const [mobileMenu, setMobileMenu] = useState(false);
   const toggleMenu = () => {
@@ -12,30 +11,19 @@ export const Header = () => {
   };
 
   return (
-    <nav className={`container ${sticky ? "dark-navbar" : ""}`}>
+    <nav className="container">
       <img className="logo" src={quaprix} alt="Image not found" />
       <ul className={mobileMenu ? "show-mobile-menu" : "hide-mobile-menu"}>
         <li className="active">
-          <a href="#Home" onClick={toggleMenu}>
+          <a href="/" onClick={toggleMenu}>
             Home
           </a>
         </li>
         <li>
-          <a href="#Service" onClick={toggleMenu}>
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#AboutUs" onClick={toggleMenu}>
-            About Us
-          </a>
-        </li>
-        <li>
-          <a href="#ContactUS" onClick={toggleMenu}>
+          <a href="/contact-us" onClick={toggleMenu}>
             Contact Us
           </a>
         </li>
-        <li></li>
       </ul>
       <img
         src={menu_icon}

@@ -9,7 +9,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
 }
 
 .logo {
@@ -35,11 +34,6 @@ nav ul li a:hover {
   padding-right: 10%;
 }
 
-.dark-navbar {
-  background: #fff;
-  color: #000;
-  transition: 0.5s ease-in-out;
-}
 
 .menu-icon {
   display: none;

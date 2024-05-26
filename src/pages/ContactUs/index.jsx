@@ -5,13 +5,10 @@ import mailIcon from "../../assets/mail-icon.png";
 import phoneIcon from "../../assets/phone-icon.png";
 import locationIcon from "../../assets/location-icon.png";
 import backgroundImg from "../../assets/ContactUs.png";
-import { Footer } from "../Footer/Footer";
-import { Header } from "../Header/Header";
 
 const ContactUs = () => {
   return (
     <div>
-      <Header />
       <div className="hero-section">
         <img src={backgroundImg} alt="Contact Us Background" />
         <div className="hero-text">
@@ -88,7 +85,6 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
