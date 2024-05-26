@@ -85,9 +85,6 @@ export const Footer = () => {
           </p>
         </address>
       </div>
-      <div className="copy-right-level">
-        <hr />
-      </div>
     </footer>
   );
 };

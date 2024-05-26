@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import quaprix from "../../assets/quaprix.png";
 import menu_icon from "../../assets/menu.png";
 
-export const Navbar = () => {
+export const Header = () => {
   const [sticky, setSticky] = useState(false);
 
   const [mobileMenu, setMobileMenu] = useState(false);

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   color: #333;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .footer-section {

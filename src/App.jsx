@@ -1,21 +1,20 @@
 import React from "react";
-import { Navbar } from "./Component/Header/Header";
-import { Hero } from "./Component/Hero/Hero";
-import { Tagline } from "./Component/Tagline/Tagline";
-import { Footer } from "./Component/Footer/Footer";
-import { Card } from "./Component/Cards/Card";
-import ContactUs from "./Component/ContactUs/ContactUs";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Homepage from "./pages/Homepage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+  },
+]);
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Tagline />
-      <Card />
-      <Footer />
-      {/* <ContactUs/> */}
-    </div>
+    <RouterProvider router={router} />
   );
 };
 
