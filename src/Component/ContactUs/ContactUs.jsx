@@ -6,7 +6,7 @@ import phoneIcon from "../../assets/phone-icon.png";
 import locationIcon from "../../assets/location-icon.png";
 import backgroundImg from "../../assets/ContactUs.png";
 import { Footer } from "../Footer/Footer";
-import { Navbar } from "../Navbar/Navbar";
+import { Navbar } from "../Header/Header";
 
 const ContactUs = () => {
   return (

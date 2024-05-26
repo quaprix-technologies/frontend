@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
+import "./Header.css";
 import quaprix from "../../assets/quaprix.png";
 import menu_icon from "../../assets/menu.png";
 
