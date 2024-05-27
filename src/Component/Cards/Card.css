@@ -1,122 +1,89 @@
 .details {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #f5f5f5;
+  margin-bottom: 100px;
+}
+
+.card-container {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
 }
 
 .card {
-  background-color: #ffffff;
+  width: 400px;
+  height: auto;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
 }
 
 .card-content {
-  flex-grow: 1;
-}
-
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #333333;
-}
-
-.card-text {
-  font-size: 16px;
-  color: #555555;
-  line-height: 1.6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 20px;  
-  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-text {
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.card-btn {
+  background-color: #000;
+  color: #fff;
+  font-size: large;
+  padding: 20px 45px;
+  margin-top: 80px;
+  border-radius: 6px;
+}
+.card-btn:hover {
+  background-color: rgba(0, 2, 92, 0.867);
 }
 
 .learn-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  text-decoration: none;
-  margin-top: auto;
+  padding: 40px 20px;
+  text-decoration: underline 2px;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .learn-more:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: rgb(37, 6, 129);
 }
 
-.button-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.button-container button {
-  padding: 15px 45px;
-  font-size: 20px;
-  font-weight: 700;
-  background-color: #000;
-  color: #ffffff;
-  border: none;
-  border-radius: 1px;
-  cursor: pointer;
-}
-
-.button-container button:hover {
-  background-color: #00186b;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1450px) {
   .card {
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 40px);
+    margin: 20px 0;
   }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: calc(50% - 20px);
-  }
-
-  .button-container button {
-    padding: 12px 36px;
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 690px) {
-  .card {
-    width: calc(100% - 20px);
-  }
-
-  .button-container button {
-    padding: 10px 30px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: calc(100% - 20px);
-  }
-
-  .button-container button {
-    padding: 8px 24px;
-    font-size: 14px;
+  @media (max-width: 1000px) {
+    .card {
+      width: calc(100% - 30px);
+      margin: 20px 0;
+    }
   }
 }

@@ -6,10 +6,10 @@ import tech from "../../assets/coding.png";
 
 export const Card = () => {
   return (
-    <div className="details">
+    <div className="details card-container">
       <div className="card">
         <div className="card-content">
-          <img src={teams} alt="Star Icon" className="icon" />
+          <img src={teams} alt="Teams Icon" className="icon" />
           <h2 className="card-title">Our Story</h2>
           <p className="card-text">
             We started as a small team of IT enthusiasts who wanted to help
@@ -19,28 +19,33 @@ export const Card = () => {
         </div>
       </div>
       <div className="card">
-        <img src={mortarboard} alt="Star Icon" className="icon" />
-        <h2 className="card-title">Our Mission</h2>
-        <p className="card-text">
-          To revolutionize the IT industry by pushing the boundaries of
-          innovation. We strive to be at the forefront of technological
-          advancement, continuously pioneering new solutions that empower
-          businesses and individuals to thrive in a rapidly evolving digital
-          landscape.
-        </p>
+        <div className="card-content">
+          <img src={mortarboard} alt="Mortarboard Icon" className="icon" />
+          <h2 className="card-title">Our Mission</h2>
+          <p className="card-text">
+            To revolutionize the IT industry by pushing the boundaries of
+            innovation. We strive to be at the forefront of technological
+            advancement, continuously pioneering new solutions that empower
+            businesses and individuals to thrive in a rapidly evolving digital
+            landscape.
+          </p>
+        </div>
       </div>
       <div className="card">
-        <img src={tech} alt="Star Icon" className="icon" />
-        <h2 className="card-title">Technologies</h2>
-        <p className="card-text">
-          We offer a comprehensive range of IT services, Our services are
-          designed to help small businesses thrive in today's digital world.
-        </p>
-        <a href="#" className="learn-more">Learn More</a>
+        <div className="card-content" >
+          <img src={tech} alt="Tech Icon" className="icon" />
+          <h2 className="card-title">Technologies</h2>
+          <p className="card-text">
+            We offer a comprehensive range of IT services. Our services are
+            designed to help small businesses thrive in today's digital world.
+          </p>
+          <a href="#" className="learn-more">Learn More</a>
+        </div>
       </div>
-      {/* <div className="button-container">
-        <button>Contact Us</button>
-      </div> */}
+      <div >
+        <button className="card-btn"><a href="/contact-us">Contact Us</a>
+        </button>
+      </div>
     </div>
   );
 };
