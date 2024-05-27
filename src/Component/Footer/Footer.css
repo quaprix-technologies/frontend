@@ -123,14 +123,14 @@
     .copyright-footer .copyright-msg {
       font-size: 15px;
       text-align: center;
-      font-weight: 400;
+      font-weight: 300;
     }
   }
   @media (max-width: 450px) {
     .copyright-footer .copyright-msg {
       font-size: 12px;
       text-align: center;
-      font-weight: 400;
+      font-weight: 300;
     }
   }
 }

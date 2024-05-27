@@ -102,12 +102,13 @@ export const Footer = () => {
             <a href="tel:+919958413035">+91-9958413035</a>
           </p>
         </div>
-        <label htmlFor="checkbox">hello</label>
       </footer>
-      <hr />
-      <h2 className="copyright-msg">
-        Copyright © 2024 Quaprix Technologies - All Rights Reserved.
-      </h2>
+      <div className="copyright-footer">
+        <hr />
+        <h2 className="copyright-msg">
+          Copyright © 2024 Quaprix Technologies - All Rights Reserved.
+        </h2>
+      </div>
     </div>
   );
 };
