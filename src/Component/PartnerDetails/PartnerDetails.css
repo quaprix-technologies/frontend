@@ -1,0 +1,39 @@
+.partnersdetails {
+  background: url("../../assets/partner-section-background.png") no-repeat
+    center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+}
+
+h2 {
+  font-size: 55px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.partner-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-out;
+}
+
+.partner-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+@media (min-width: 900px) {
+  .partner-icon {
+    transition: transform 0.3s ease-out;
+  }
+
+  .partner-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
