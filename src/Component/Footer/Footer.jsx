@@ -11,67 +11,85 @@ import linkedinIcon from "../../assets/linkedin.png";
 
 export const Footer = () => {
   return (
-    <footer className="footer container">
-      <div className="footer-section1">
-        <div className="footer-logo">
-          <img src={logo} className="logo-header" alt="Quaprix Header Logo" />
-          <h3>Require assistance?</h3>
-          <button className="contact-button">Contact Us</button>
+    <div>
+      <footer className="footer container">
+        <div className="footer-section">
+          <div className="footer-logo">
+            <img src={logo} className="logo-img" alt="Quaprix Header Logo" />
+            <h3>Require assistance?</h3>
+            <a href="/contact-us">
+              <button className="contact-button">Contact Us</button>
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="footer-section">
-        <h4>QUICK LINKS</h4>
-        <ul>
-          <li> 
-            <a href="/home">Home</a>
-          </li>
-          <li>
-            <a href="/services">Services</a>
-          </li>
-          <li>
-            <a href="/about">About Us</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="/privacy">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="/terms">Term and Condition</a>
-          </li>
-        </ul>
-      </div>
-      <div className="footer-section">
-        <h4>FOLLOW US</h4>
-        <ul className="social-icons">
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={fbIcon} alt="Facebook" />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={twitterIcon} alt="Twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={instaIcon} alt="Instagram" />
-            </a>
-          </li>
-          <li>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src={linkedinIcon} alt="LinkedIn" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="footer-section2">
-        <h4>Contact Us</h4>
-        <address>
+        <div className="footer-section">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li>
+              <a href="/home">Home</a>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/privacy">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/terms">Term and Condition</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h4>FOLLOW US</h4>
+          <ul className="social-icons">
+            <li>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={fbIcon} alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={twitterIcon} alt="Twitter" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={instaIcon} alt="Instagram" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkedinIcon} alt="LinkedIn" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h4>CONTACT US</h4>
           <p>
-            <img src={locationIcon} className="location" alt="Location" />
+            <img src={locationIcon} alt="Location" />
             D-A-5, Veer Savarkar Block, Dayanand Colony, Shakarpur, New Delhi,
             Delhi, 110092
           </p>
@@ -83,8 +101,13 @@ export const Footer = () => {
             <img src={phoneIcon} alt="Phone" />
             <a href="tel:+919958413035">+91-9958413035</a>
           </p>
-        </address>
-      </div>
-    </footer>
+        </div>
+        <label htmlFor="checkbox">hello</label>
+      </footer>
+      <hr />
+      <h2 className="copyright-msg">
+        Copyright © 2024 Quaprix Technologies - All Rights Reserved.
+      </h2>
+    </div>
   );
 };
