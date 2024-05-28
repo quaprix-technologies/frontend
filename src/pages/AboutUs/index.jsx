@@ -38,6 +38,12 @@ const About = () => {
           deliver solutions that open a world of possibilities for our clients.
         </p>
       </div>
+      <div className="background-container2">
+        <h1>Get In Touch With Us</h1>
+        <button className="contact-btn">
+          <a href="/contact-us">Contact</a>
+        </button>
+      </div>
     </>
   );
 };
