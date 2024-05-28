@@ -20,6 +20,11 @@ export const Header = () => {
           </a>
         </li>
         <li>
+          <a href="/about-us" onClick={toggleMenu}>
+            About us
+          </a>
+        </li>
+        <li>
           <a href="/contact-us" onClick={toggleMenu}>
             Contact Us
           </a>

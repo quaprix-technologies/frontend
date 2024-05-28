@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import { Header } from "./Component/Header/Header";
 import { Footer } from "./Component/Footer/Footer";
 import ContactUs from "./pages/ContactUs";
+import AboutUs from './pages/AboutUs'
 
 const App = () => {
   const FullPage = ({ children }) => (
@@ -30,7 +31,14 @@ const App = () => {
           <ContactUs />
         </FullPage>
       ),
-    },
+    },{
+      path: "/about-us",
+      element: (
+        <FullPage>
+        <AboutUs/>
+        </FullPage>
+      ),
+    }
   ]);
 
   return <RouterProvider router={router} />;
