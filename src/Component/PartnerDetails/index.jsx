@@ -6,7 +6,9 @@ const PartnerDetails = () => {
   return (
     <div className="partnersdetails">
       <h2>Our Partner </h2>
-      <img src={partner_iocn} alt="" className="partner-icon" />
+      <a href="https://www.qualitydynamics.net/"  target="_blank" >
+        <img src={partner_iocn} alt="" className="partner-icon" />
+      </a>
     </div>
   );
 };
