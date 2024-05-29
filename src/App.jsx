@@ -6,6 +6,7 @@ import { Footer } from "./Component/Footer/Footer";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Term_Condition from "./pages/Term&Condition";
 
 const App = () => {
   const FullPage = ({ children }) => (
@@ -46,6 +47,14 @@ const App = () => {
       element: (
         <FullPage>
           <PrivacyPolicy />
+        </FullPage>
+      ),
+    },
+    {
+      path: "/term-condition",
+      element: (
+        <FullPage>
+          <Term_Condition />
         </FullPage>
       ),
     },

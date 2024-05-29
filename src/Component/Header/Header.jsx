@@ -12,7 +12,9 @@ export const Header = () => {
 
   return (
     <nav className="container">
-      <img className="logo" src={quaprix} alt="Image not found" />
+      <a href="/">
+      <img className="logo"  src={quaprix} alt="Image not found" />
+      </a>
       <ul className={mobileMenu ? "show-mobile-menu" : "hide-mobile-menu"}>
         <li className="active">
           <a href="/" onClick={toggleMenu}>

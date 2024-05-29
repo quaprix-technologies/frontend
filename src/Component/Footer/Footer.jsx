@@ -41,7 +41,7 @@ export const Footer = () => {
               <a href="/privacy-policy">Privacy Policy</a>
             </li>
             <li>
-              <a href="/terms">Term and Condition</a>
+              <a href="/term-condition">Term and Condition</a>
             </li>
           </ul>
         </div>
