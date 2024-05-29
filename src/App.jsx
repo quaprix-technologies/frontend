@@ -7,6 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Term_Condition from "./pages/Term&Condition";
+import Service from "./pages/Service"
 
 const App = () => {
   const FullPage = ({ children }) => (
@@ -55,6 +56,14 @@ const App = () => {
       element: (
         <FullPage>
           <Term_Condition />
+        </FullPage>
+      ),
+    },
+    {
+      path: "/services",
+      element: (
+        <FullPage>
+          <Service/>
         </FullPage>
       ),
     },
