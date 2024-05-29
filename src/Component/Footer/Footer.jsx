@@ -38,7 +38,7 @@ export const Footer = () => {
               <a href="/contact-us">Contact Us</a>
             </li>
             <li>
-              <a href="/privacy">Privacy Policy</a>
+              <a href="/privacy-policy">Privacy Policy</a>
             </li>
             <li>
               <a href="/terms">Term and Condition</a>
