@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Term&Condition.css";
 
 const index = () => {
+
+  useEffect(() => {
+    document.title = "Term & Condition";
+  }, []);
+
   return (
     <div className="terms-conditions">
       <h1>TERMS & CONDITIONS</h1>

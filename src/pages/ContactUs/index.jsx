@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ContactUs.css";
 import msgIcon from "../../assets/msg-icon.png";
 import mailIcon from "../../assets/mail-icon.png";
@@ -7,6 +7,11 @@ import locationIcon from "../../assets/location-icon.png";
 import backgroundImg from "../../assets/ContactUs.png";
 
 const ContactUs = () => {
+
+  useEffect(() => {
+    document.title = "Contact";
+  }, []);
+
   return (
     <div>
       <div className="hero-section">

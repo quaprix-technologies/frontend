@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./PrivacyPolicy.css";
 
 const index = () => {
+
+  useEffect(() => {
+    document.title = "Privacy Policy";
+  }, []);
+
   return (
     <div className="privacy-policy">
       <h1>Privacy Policy</h1>
