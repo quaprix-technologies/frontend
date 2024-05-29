@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./service.css";
 
 const index = () => {
- 
+
+  useEffect(() => {
+    document.title = "Service";
+  }, []);
+
   return (
     <div className="service">
       <div className="text">
