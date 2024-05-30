@@ -22,6 +22,11 @@ export const Header = () => {
           </a>
         </li>
         <li>
+          <a href="/services" onClick={toggleMenu}>
+            Services
+          </a>
+        </li>
+        <li>
           <a href="/about-us" onClick={toggleMenu}>
             About Us
           </a>
