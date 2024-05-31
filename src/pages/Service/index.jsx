@@ -3,7 +3,6 @@ import "./service.css";
 import Cards from "./Cards/Cards";
 
 const index = () => {
-
   useEffect(() => {
     document.title = "Service";
   }, []);
@@ -21,6 +20,15 @@ const index = () => {
         </div>
       </div>
       <Cards />
+      <div className="service-banner">
+        <h1>
+          Looking for a Partner to Support Your Business Growth or <br />{" "}
+          Monetize Your Idea?
+        </h1>
+        <button className="contact-btn">
+          <a href="/contact-us">Contact</a>
+        </button>
+      </div>
     </>
   );
 };
