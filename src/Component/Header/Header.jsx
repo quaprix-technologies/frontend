@@ -36,6 +36,11 @@ export const Header = () => {
             Contact Us
           </a>
         </li>
+        <li>
+          <a href="/careers" onClick={toggleMenu}>
+            Careers
+          </a>
+        </li>
       </ul>
       <img
         src={menu_icon}
