@@ -50,7 +50,7 @@ export const Footer = () => {
           <ul className="social-icons">
             <li>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61559163870823"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -59,7 +59,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/Quaprix"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -68,7 +68,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/quaprix_tech/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -77,7 +77,7 @@ export const Footer = () => {
             </li>
             <li>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/quaprix-technologies/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
