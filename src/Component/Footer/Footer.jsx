@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import logo from "../../assets/quaprix_header.png";
 import FollowUs from "../FollowUs/FollowUs";
-import Contact from "../Contact/Contact";
+import Contact from "../Contact_Footer/Contact";
 import QuickLink from "../QuickLink/QuickLink";
 import CopyRight from "../CopyRight/CopyRight";
 
