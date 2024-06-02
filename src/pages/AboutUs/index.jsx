@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./About.css";
 import AboutText from "../../Component/AboutText/AboutText";
+import Button from "../../Component/ContactUsBtn/Button";
 
 const About = () => {
   useEffect(() => {
@@ -25,9 +26,7 @@ const About = () => {
       <AboutText />
       <div className="background-container2">
         <h1>Get In Touch With Us</h1>
-        <button className="contact-btn">
-          <a href="/contact-us">Contact</a>
-        </button>
+        <Button/>
       </div>
     </>
   );

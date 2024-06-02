@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./service.css";
 import Cards from "./Cards/Cards";
+import Button from "../../Component/ContactUsBtn/Button";
 
 const index = () => {
   useEffect(() => {
@@ -25,9 +26,7 @@ const index = () => {
           Looking for a Partner to Support Your Business Growth or <br />{" "}
           Monetize Your Idea?
         </h1>
-        <button className="contact-btn">
-          <a href="/contact-us">Contact</a>
-        </button>
+        <Button />
       </div>
     </>
   );
