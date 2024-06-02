@@ -3,7 +3,7 @@ name: Dev Branch CI/CD
 on:
   push:
     branches:
-      - main
+      - mydev
 
 jobs:
   build-test-deploy:
