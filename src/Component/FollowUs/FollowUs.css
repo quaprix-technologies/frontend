@@ -1,0 +1,31 @@
+.follow-us h4 {
+  margin-bottom: 20px;
+}
+
+.follow-us h4 {
+  font-size: 25px;
+}
+
+.follow-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 30px 10px;
+}
+
+.social-icons img {
+  height: 35px;
+  width: 35px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+  transform: scale(1.5);
+}
+
+.follow-us a {
+  text-decoration: none;
+  color: black;
+}

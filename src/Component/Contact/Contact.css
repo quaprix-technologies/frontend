@@ -1,0 +1,16 @@
+.contact-section img {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.contact-section h4 {
+  font-size: 25px;
+}
+
+.contact-section p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding-bottom: 20px;
+}

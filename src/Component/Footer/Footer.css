@@ -2,8 +2,6 @@
   background-color: #eae8e8;
   padding-top: 40px;
   display: flex;
-  justify-content: space-evenly;
-  color: #333;
   flex-wrap: wrap;
 }
 
@@ -16,14 +14,9 @@
   font-size: 25px;
 }
 
-.footer-logo img.logo-img {
+.footer-logo .logo-img {
   height: 90px;
   width: 300px;
-}
-
-.logo-footer img {
-  max-width: 95%;
-  height: auto;
 }
 
 .footer-logo button {
@@ -37,61 +30,10 @@
   font-weight: 800;
   font-size: 15px;
 }
-.container {
-  padding-left: 4%;
-  padding-right: 4%;
-}
 
 .footer-logo button:hover {
   background-color: #000e3d;
   color: white;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section li {
-  margin: 20px 5px;
-  padding-top: 12px;
-  font-weight: 500;
-}
-
-.footer-section a {
-  text-decoration: none;
-  color: black;
-}
-
-.footer-section a:hover {
-  text-decoration: underline 2px;
-}
-
-.footer-section img {
-  margin-right: 10px;
-  width: 30px;
-  height: 30px;
-}
-
-.footer-section h4 {
-  font-size: 25px;
-}
-
-.social-icons img {
-  height: 35px;
-  width: 35px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.social-icons img:hover {
-  transform: scale(1.5);
-}
-
-.footer-section p {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-  padding-bottom: 20px;
 }
 
 .copyright-footer {

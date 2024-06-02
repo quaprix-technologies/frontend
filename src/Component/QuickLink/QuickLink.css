@@ -1,0 +1,22 @@
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+.quick-links h4 {
+  font-size: 25px;
+}
+
+.quick-links li {
+  margin: 20px 5px;
+  padding-top: 12px;
+  font-weight: 500;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.quick-links a:hover {
+  text-decoration: underline 2px;
+}
