@@ -3,6 +3,7 @@ import "./Card.css";
 import teams from "../../assets/group.png";
 import mortarboard from "../../assets/mortarboard.png";
 import tech from "../../assets/coding.png";
+import Button from "../ContactUsBtn/Button";
 
 export const Card = () => {
   return (
@@ -43,8 +44,7 @@ export const Card = () => {
         </div>
       </div>
       <div >
-        <button className="card-btn"><a href="/contact-us">Contact Us</a>
-        </button>
+        <Button/>
       </div>
     </div>
   );
