@@ -4,6 +4,7 @@ import logo from "../../assets/quaprix_header.png";
 import FollowUs from "../FollowUs/FollowUs";
 import Contact from "../Contact/Contact";
 import QuickLink from "../QuickLink/QuickLink";
+import CopyRight from "../CopyRight/CopyRight";
 
 export const Footer = () => {
   return (
@@ -22,12 +23,7 @@ export const Footer = () => {
         <FollowUs />
         <Contact />
       </footer>
-      <div className="copyright-footer">
-        <hr />
-        <h2 className="copyright-msg">
-          Copyright © 2024 Quaprix Technologies - All Rights Reserved.
-        </h2>
-      </div>
+      <CopyRight/>
     </div>
   );
 };
