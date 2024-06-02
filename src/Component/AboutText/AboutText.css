@@ -1,0 +1,17 @@
+.aboutus-text h1 {
+  text-align: center;
+  padding: 4% 0 2%;
+  font-size: 3rem;
+  color: rgb(62, 61, 61);
+}
+
+.aboutus-text p {
+  text-align: left;
+  font-size: 1.38rem;
+  font: normal normal 22px "Roboto Slab", "Arial", "serif";
+  color: #262626;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 34px;
+  padding-bottom: 25px;
+}
