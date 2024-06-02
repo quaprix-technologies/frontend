@@ -39,7 +39,7 @@ export const Card = () => {
             We offer a comprehensive range of IT services. Our services are
             designed to help small businesses thrive in today's digital world.
           </p>
-          <a href="#" className="learn-more">Learn More</a>
+          <a href="/services" className="learn-more">Learn More</a>
         </div>
       </div>
       <div >
