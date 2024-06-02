@@ -1,9 +1,9 @@
-name: Dev Branch CI/CD
+name: PR CI/CD
 
 on:
-  push:
+  pull_request:
     branches:
-      - mydev
+      - dev
 
 jobs:
   build-test-deploy:
