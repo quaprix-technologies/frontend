@@ -20,15 +20,8 @@
 }
 
 .footer-logo button {
-  background-color: #eae8e8;
-  border-radius: 25px;
-  border: solid;
-  cursor: pointer;
-  color: black;
-  padding: 15px 40px;
   margin-top: 40px;
   font-weight: 800;
-  font-size: 15px;
 }
 
 .footer-logo button:hover {
