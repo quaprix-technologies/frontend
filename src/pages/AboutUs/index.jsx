@@ -9,7 +9,7 @@ const About = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div className="background-container">
         <div className="text-container">
           <h1>
@@ -25,7 +25,7 @@ const About = () => {
       </div>
       <AboutText />
       <AboutBanner />
-    </>
+    </div>
   );
 };
 
