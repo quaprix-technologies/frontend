@@ -1,6 +1,7 @@
 import React from "react";
 import "./Careers.css";
 import Jobs from "../../Component/Jobs/Jobs";
+import CareerForm from "../../Component/CareerForm";
 
 const Careers = () => {
   return (
@@ -20,8 +21,10 @@ const Careers = () => {
           Take a look at our open positions below to find something that excites
           you.
         </h3>
+        <Jobs />
+        <h1>Apply Now</h1>
+        <CareerForm/>
       </div>
-      <Jobs />
     </div>
   );
 };
