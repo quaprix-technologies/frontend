@@ -9,7 +9,7 @@ const index = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div className="service">
         <div className="text">
           <h1>What We Do</h1>
@@ -22,7 +22,7 @@ const index = () => {
       </div>
       <Cards />
       <ServiceBanner />
-    </>
+    </div>
   );
 };
 
