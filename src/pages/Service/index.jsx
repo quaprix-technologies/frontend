@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./service.css";
 import Cards from "./Cards/Cards";
-import Button from "../../Component/ContactUsBtn/Button";
+import ServiceBanner from "../../Component/ServiceBanner/ServiceBanner";
 
 const index = () => {
   useEffect(() => {
@@ -21,13 +21,7 @@ const index = () => {
         </div>
       </div>
       <Cards />
-      <div className="service-banner">
-        <h1>
-          Looking for a Partner to Support Your Business Growth or <br />{" "}
-          Monetize Your Idea?
-        </h1>
-        <Button />
-      </div>
+      <ServiceBanner />
     </>
   );
 };
