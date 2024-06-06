@@ -2,6 +2,7 @@ import React from "react";
 import "./Careers.css";
 import Jobs from "../../Component/Jobs/Jobs";
 import CareerForm from "../../Component/CareerForm";
+// import Form from "../../Component/ContactForm/Form"
 
 const Careers = () => {
   return (
@@ -22,7 +23,7 @@ const Careers = () => {
           you.
         </h3>
         <Jobs />
-        <h1>Apply Now</h1>
+        <h1>Join Our Team</h1>
         <CareerForm/>
       </div>
     </div>

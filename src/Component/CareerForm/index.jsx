@@ -1,72 +1,134 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CareerForm.css";
+import axios from "axios";
 
 const CareerForm = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [file, setFile] = useState(null);
+  const [option, setOption] = useState("");
+
+  const resetForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setNumber("");
+    setFile(null);
+    setOption("");
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const mailBody = `Query:
+        Name: ${firstName + " " + lastName} \n
+        Phone: ${number} \n
+        Service: ${option} \n
+        Email: ${email} \n`;
+
+    const formData = new FormData();
+    formData.append("to", "harshitverma2103@gmail.com");
+    formData.append("subject", "Query for IT services");
+    formData.append("text", mailBody);
+    if (file) {
+      formData.append("file", file);
+    }
+
+    try {
+      await axios.post("http://localhost:8080/send-email", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      alert("Form submitted successfully!");
+      resetForm();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Error sending email. Please try again.");
+    }
+  };
+
   return (
-    <div className="center-wrapper">
-      <div className="form-container">
-        <form
-          action="/submit_application"
-          method="post"
-          encType="multipart/form-data"
-        >
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
+    <div className="form-wrapper container">
+      <form onSubmit={handleSubmit} className="form">
+        <div className="form-row">
+          <div className="input-group">
             <input
               type="text"
-              id="name"
-              name="name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               required
-              placeholder="Name*"
             />
+            <label>First Name</label>
+            <div className="underline"></div>
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
+          <div className="input-group">
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              required
+            />
+            <label>Last Name</label>
+            <div className="underline"></div>
+          </div>
+        </div>
+        <div className="form-row">
+          <div className="input-group">
             <input
               type="email"
-              id="email"
-              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
-              placeholder="Email*"
             />
+            <label>Email Address</label>
+            <div className="underline"></div>
           </div>
-          <div className="form-group">
-            <label htmlFor="phone">Phone Number</label>
+          <div className="input-group">
             <input
-              type="tel"
-              id="phone"
-              name="phone"
+              type="text"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
               required
-              placeholder="Phone No.*"
             />
+            <label>Phone Number</label>
+            <div className="underline"></div>
           </div>
-          <div className="form-group">
-            <label htmlFor="position">Position</label>
-            <select id="position" name="position" required>
-              <option value="">Role*</option>
-              <option value="software_developer">Software Developer</option>
-              <option value="QA">Quality Analyst</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="resume">Resume (PDF only)</label>
+        </div>
+
+        <div className="form-row">
+          <div className="input-group">
             <input
               type="file"
-              id="resume"
-              name="resume"
-              accept="application/pdf"
-              required
+              accept=".pdf"
+              onChange={(e) => setFile(e.target.files[0])}
             />
-            <p>
-              Max file size (Mb): 2 <br />
-              Max number of files: 1
-            </p>
+            <div className="underline"></div>
           </div>
-          <div className="form-group">
-            <button type="submit">Submit</button>
+        </div>
+        <div className="form-row">
+          <div className="input-group">
+            <select
+              value={option}
+              onChange={(e) => setOption(e.target.value)}
+              required
+            >
+              <option value="" disabled>
+                Open Positions
+              </option>
+              <option value="Web Developer">Web Developer</option>
+              <option value="Quality Analyst (QA)">Quality Analyst (QA)</option>
+            </select>
+            <div className="underline"></div>
           </div>
-        </form>
-      </div>
+        </div>
+        <div className="form-row">
+          <div className="submit-btn">
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </form>
     </div>
   );
 };
