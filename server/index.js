@@ -11,7 +11,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const upload = multer({ dest: "uploads/" });
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 app.listen(PORT, () => {
   console.log("Server is running on port " + PORT);
@@ -31,19 +32,20 @@ app.post("/send-email", upload.single("file"), async (req, res) => {
     });
 
     const mailOptions = {
-      from: "harshitverma2103@gmail.com",
+      // from: "harshitverma2103@gmail.com",
       to,
       subject,
       text,
       attachments: [
         {
           filename: file.originalname,
-          path: file.path,
+          content: file.buffer,
         },
       ],
     };
 
     await transporter.sendMail(mailOptions);
+    req.file.buffer = null;
     res.send("Email sent successfully");
     console.log("Email sent!!");
   } catch (error) {
