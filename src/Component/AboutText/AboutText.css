@@ -5,6 +5,10 @@
   color: rgb(62, 61, 61);
 }
 
+.about-container {
+  padding: 0 10% 0 10%;
+}
+
 .aboutus-text p {
   text-align: left;
   font-size: 1.38rem;
