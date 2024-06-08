@@ -1,12 +1,13 @@
 import React, {useRef, useState} from "react";
 import axios from "axios";
-import GenericForm from "../GenericForm/index.jsx";
+import Form from "../Form/index.jsx";
+import {constructFormData} from "../../utils.js";
 import "./styles.css";
 
 const CareerForm = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
   const [option, setOption] = useState("");
   const [file, setFile] = useState(null);
   const fileInputRef = useRef(null);
@@ -18,16 +19,7 @@ const CareerForm = () => {
       label: 'Your Name',
       placeholder: 'Enter your name',
       value: name,
-      onChange: setName,
-      required: true,
-    },
-    {
-      type: 'email',
-      id: 'email',
-      label: 'Your Email',
-      placeholder: 'Enter your email',
-      value: email,
-      onChange: setEmail,
+      onChange: (e) => setName(e.target.value),
       required: true,
     },
     {
@@ -37,7 +29,16 @@ const CareerForm = () => {
       placeholder: 'Enter your phone number',
       pattern:"[0-9]*",
       value: number,
-      onChange: setNumber,
+      onChange: (e) => setNumber(e.target.value),
+      required: true,
+    },
+    {
+      type: 'email',
+      id: 'email',
+      label: 'Your Email',
+      placeholder: 'Enter your email',
+      value: email,
+      onChange: (e) => setEmail(e.target.value),
       required: true,
     },
     {
@@ -56,7 +57,7 @@ const CareerForm = () => {
         }
       ],
       value: option,
-      onChange: setOption,
+      onChange: (e) => setOption(e.target.value),
       required: true,
     },
     {
@@ -64,7 +65,7 @@ const CareerForm = () => {
       id: 'file',
       label: 'Upload Your Resume',
       fileType: '.pdf, .doc, .docx',
-      onChange: setFile,
+      onChange: (e) => setFile(e.target.files[0]),
       ref: fileInputRef,
       required: true,
     },
@@ -72,8 +73,8 @@ const CareerForm = () => {
 
   const resetForm = () => {
     setName("");
-    setEmail("");
     setNumber("");
+    setEmail("");
     setOption("");
     setFile(null);
     if (fileInputRef.current) {
@@ -83,22 +84,21 @@ const CareerForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const mailBody = `Query:
+    const text = `Query:
         Name: ${name} \n
         Phone: ${number} \n
-        Service: ${option} \n
-        Email: ${email} \n`;
+        Email: ${email} \n
+        Service: ${option} \n`;
 
-    const formData = new FormData();
-    formData.append("to", "harshitverma2103@gmail.com");
-    formData.append("subject", "Query for IT services");
-    formData.append("text", mailBody);
-    if (file) {
-      formData.append("file", file);
-    }
+    const formData = constructFormData({
+      to: process.env.REACT_APP_EMAIL_RECEIVER,
+      subject: "Job Application",
+      text,
+      file
+    });
 
     try {
-      await axios.post("http://localhost:8080/send-email", formData, {
+      await axios.post("http://localhost:8080/careers-form", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -106,14 +106,13 @@ const CareerForm = () => {
       resetForm();
       alert("Form submitted successfully!");
     } catch (error) {
-      console.error("Error sending email:", error);
       alert("Error sending email. Please try again.");
     }
   };
 
   return (
       <div className="career-form">
-        <GenericForm fields={fields} onSubmit={handleSubmit} />
+        <Form fields={fields} onSubmit={handleSubmit} />
       </div>
   )
 };

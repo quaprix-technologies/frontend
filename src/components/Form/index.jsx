@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 
-const GenericForm = ({method, fields, onSubmit}) => {
+const Form = ({method, fields, onSubmit}) => {
     return (
         <div className="form-container">
             <form method={method} onSubmit={onSubmit}>
@@ -17,7 +17,7 @@ const GenericForm = ({method, fields, onSubmit}) => {
                                 rows={field.rows}
                                 placeholder={field.placeholder}
                                 required={field.required}
-                                onChange={(e) => field.onChange(e.target.value)}
+                                onChange={field.onChange}
                             />
                         ) : field.type === 'select' ? (
                             <select
@@ -25,7 +25,7 @@ const GenericForm = ({method, fields, onSubmit}) => {
                                 name={field.name}
                                 value={field.value}
                                 required={field.required}
-                                onChange={(e) => field.onChange(e.target.value)}
+                                onChange={field.onChange}
                             >
                                 <option value="" disabled>{field.placeholder}</option>
                                 {field.options.map((option, i) => (
@@ -41,7 +41,7 @@ const GenericForm = ({method, fields, onSubmit}) => {
                                 name={field.name}
                                 required={field.required}
                                 accept={field.accept}
-                                onChange={(e) => field.onChange(e.target.files[0])}
+                                onChange={field.onChange}
                                 ref={field.ref}
                             />
                         ) : (
@@ -52,7 +52,7 @@ const GenericForm = ({method, fields, onSubmit}) => {
                                 placeholder={field.placeholder}
                                 required={field.required}
                                 pattern={field.pattern}
-                                onChange={(e) => field.onChange(e.target.value)}
+                                onChange={field.onChange}
                                 value={field.value}
                             />
                         )}
@@ -66,4 +66,4 @@ const GenericForm = ({method, fields, onSubmit}) => {
     );
 };
 
-export default GenericForm;
+export default Form;

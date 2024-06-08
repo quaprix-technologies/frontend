@@ -1,8 +1,10 @@
+const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const express = require("express");
 const multer = require("multer");
-const nodemailer = require("nodemailer");
+const careersFormHandler = require("./src/handlers/careersFormHandler");
+const contactFormHandler = require("./src/handlers/contactFormHandler");
+require('dotenv').config();
 
 const app = express();
 const PORT = 8080;
@@ -11,45 +13,13 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
-
 app.listen(PORT, () => {
   console.log("Server is running on port " + PORT);
 });
 
-app.post("/send-email", upload.single("file"), async (req, res) => {
-  const { to, subject, text } = req.body;
-  const { file } = req;
-  console.log("sending email ...");
-  try {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "harshitverma2103@gmail.com",
-        pass: "snny evcp wtui gfnk",
-      },
-    });
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
-    const mailOptions = {
-      // from: "harshitverma2103@gmail.com",
-      to,
-      subject,
-      text,
-      attachments: [
-        {
-          filename: file.originalname,
-          content: file.buffer,
-        },
-      ],
-    };
+app.post("/careers-form", upload.single("file"), careersFormHandler);
 
-    await transporter.sendMail(mailOptions);
-    req.file.buffer = null;
-    res.send("Email sent successfully");
-    console.log("Email sent!!");
-  } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).send("Error sending email");
-  }
-});
+app.post("/contact-form", upload.none(), contactFormHandler);

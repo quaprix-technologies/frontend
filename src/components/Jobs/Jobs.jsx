@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import "./Jobs.css"
+import React, { useEffect } from "react";
+import "./Jobs.css";
 
 const Jobs = () => {
   useEffect(() => {

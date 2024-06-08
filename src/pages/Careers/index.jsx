@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import Jobs from "../../components/Jobs/Jobs";
-import CareerForm from "../../components/CareerForm";
+import CareerForm from "../../components/CareersForm";
 
 const Careers = () => {
   return (

@@ -20,4 +20,7 @@ module.exports = {
     'react/prop-types': 'off',
     'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }],
   },
+  globals: {
+    process: 'readonly',
+  },
 }
