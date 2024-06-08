@@ -53,7 +53,3 @@ app.post("/send-email", upload.single("file"), async (req, res) => {
     res.status(500).send("Error sending email");
   }
 });
-
-app.get("/hello", (req, res) => {
-  res.send("hello server");
-});

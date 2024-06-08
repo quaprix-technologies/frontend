@@ -1,8 +1,8 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import { Header } from "./Component/Header/Header";
-import { Footer } from "./Component/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutBanner.css"
-import Button from "../../Component/ContactUsBtn/Button";
+import Button from "../ContactUsBtn/Button";
 
 const AboutBanner = () => {
   return (

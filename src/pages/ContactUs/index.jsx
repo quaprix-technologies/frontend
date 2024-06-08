@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "./ContactUs.css";
-import Contact from "../../Component/Contact_Footer/Contact"
-import msgIcon from "../../assets/msg-icon.png";
+import Contact from "../../components/Contact_Footer/Contact"
 import backgroundImg from "../../assets/ContactUs.png";
-import Form from "../../Component/ContactForm/Form";
+import ContactForm from "../../components/ContactForm/index.jsx";
+import msgIcon from "../../assets/msg-icon.png";
+import "./styles.css";
 
 const ContactUs = () => {
 
@@ -17,7 +17,7 @@ const ContactUs = () => {
         <img src={backgroundImg} alt="Contact Us Background" />
         <div className="hero-text">
           <h1>Get In Touch</h1>
-          <p>We'd love to hear from you</p>
+          <p>We&apos;d love to hear from you</p>
         </div>
       </div>
       <div className="contact">
@@ -33,7 +33,9 @@ const ContactUs = () => {
           </p>
           <Contact/>
         </div>
-        <Form/>
+        <div className="contact-col">
+          <ContactForm/>
+        </div>
       </div>
     </div>
   );

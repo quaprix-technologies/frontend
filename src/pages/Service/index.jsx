@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./service.css";
 import Cards from "./Cards/Cards";
-import ServiceBanner from "../../Component/ServiceBanner/ServiceBanner";
+import ServiceBanner from "../../components/ServiceBanner/ServiceBanner";
 
 const index = () => {
   useEffect(() => {

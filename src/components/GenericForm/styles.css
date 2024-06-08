@@ -1,0 +1,32 @@
+form select,
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    background: #ebecfe;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+}
+
+.form-container span {
+    display: block;
+    margin: 20px;
+}
+
+.btns {
+    background: #062988;
+    color: #fff;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+}

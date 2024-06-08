@@ -1,0 +1,12 @@
+.career-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-form > * {
+  width: 100%;
+  max-width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
+}
