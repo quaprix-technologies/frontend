@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Contact from "../../components/Contact_Footer/Contact"
 import backgroundImg from "../../assets/ContactUs.png";
-import ContactForm from "../../components/ContactForm/index.jsx";
+import ContactForm from "../../components/ContactForm";
 import msgIcon from "../../assets/msg-icon.png";
 import "./styles.css";
 
