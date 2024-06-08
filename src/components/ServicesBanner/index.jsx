@@ -1,9 +1,9 @@
 import React from "react";
-import "./ServiceBanner.css";
 import Button from "../ContactUsBtn/Button";
+import "./styles.css";
 
 
-const ServiceBanner = () => {
+const ServicesBanner = () => {
   return (
     <div className="service-banner">
       <h1>
@@ -15,4 +15,4 @@ const ServiceBanner = () => {
   );
 };
 
-export default ServiceBanner;
+export default ServicesBanner;

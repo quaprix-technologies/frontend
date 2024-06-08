@@ -9,3 +9,13 @@ export const constructFormData = ({to, subject, text, ...rest}) => {
     })
     return formData;
 }
+
+export const scrollToElement = (id, buffer) => {
+    const element = document.getElementById(id);
+    if (element) {
+        const elementRect = element.getBoundingClientRect();
+        const absoluteElementTop = elementRect.top + window.scrollY;
+        const middle = absoluteElementTop + buffer - ((window.innerHeight / 100) * 14);
+        window.scrollTo({ top: middle, behavior: 'smooth' });
+    }
+};

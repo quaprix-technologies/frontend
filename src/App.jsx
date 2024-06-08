@@ -7,7 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Term_Condition from "./pages/Term&Condition";
-import Service from "./pages/Service";
+import Services from "./pages/Services";
 import Careers from "./pages/Careers";
 
 const App = () => {
@@ -64,7 +64,7 @@ const App = () => {
       path: "/services",
       element: (
         <FullPage>
-          <Service />
+          <Services />
         </FullPage>
       ),
     },

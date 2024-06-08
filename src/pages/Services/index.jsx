@@ -1,29 +1,29 @@
 import React, { useEffect } from "react";
-import "./service.css";
-import Cards from "./Cards/Cards";
-import ServiceBanner from "../../components/ServiceBanner/ServiceBanner";
+import ServicesBanner from "../../components/ServicesBanner";
+import ServicesCards from "./Cards";
+import "./styles.css";
 
-const index = () => {
+const Services = () => {
   useEffect(() => {
     document.title = "Service";
   }, []);
 
   return (
     <div>
-      <div className="service">
+      <div className="service" id="services">
         <div className="text">
           <h1>What We Do</h1>
           <p>
             We offer a comprehensive range of IT services, <br />
             Our services are designed to help small <br />
-            businesses thrive in today's digital world.
+            businesses thrive in today&apos;s digital world.
           </p>
         </div>
       </div>
-      <Cards />
-      <ServiceBanner />
+      <ServicesCards />
+      <ServicesBanner />
     </div>
   );
 };
 
-export default index;
+export default Services;
