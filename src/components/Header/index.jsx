@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Header.css";
-import quaprix from "../../assets/quaprix.png";
-import menu_icon from "../../assets/menu.png";
+import quaprix from "../../assets/icons/quaprix.png";
+import menu_icon from "../../assets/icons/menu.png";
+import "./styles.css";
 
-export const Header = () => {
-
+const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+
   const toggleMenu = () => {
     setMobileMenu((prevMobileMenu) => !prevMobileMenu);
   };
@@ -56,3 +56,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

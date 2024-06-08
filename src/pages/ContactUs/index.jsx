@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import Contact from "../../components/Contact_Footer/Contact"
+import ContactUsSection from "../../components/ContactUsSection";
 import ContactForm from "../../components/ContactForm";
-import msgIcon from "../../assets/msg-icon.png";
+import msgIcon from "../../assets/icons/msg-icon.png";
 import "./styles.css";
 
 const ContactUs = () => {
@@ -29,7 +29,7 @@ const ContactUs = () => {
             important to us as we strive to provide exceptional service to our
             university community.
           </p>
-          <Contact/>
+          <ContactUsSection/>
         </div>
         <div className="contact-col">
           <ContactForm/>

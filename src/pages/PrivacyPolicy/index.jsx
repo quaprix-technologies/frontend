@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./PrivacyPolicy.css";
+import "./styles.css";
 
 const index = () => {
 

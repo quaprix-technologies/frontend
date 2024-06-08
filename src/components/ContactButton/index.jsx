@@ -1,7 +1,7 @@
 import React from "react";
-import "./Button.css"
+import "./styles.css"
 
-const Button = () => {
+const ContactButton = () => {
   return (
     <div>
       <button className="contact-btn">
@@ -11,4 +11,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default ContactButton;

@@ -1,17 +1,17 @@
 import React from "react";
-import "./FollowUs.css";
-import fbIcon from "../../assets/facebook.png";
-import twitterIcon from "../../assets/twitter.png";
-import instaIcon from "../../assets/instagram.png";
-import linkedinIcon from "../../assets/linkedin.png";
+import fbIcon from "../../assets/icons/facebook.png";
+import twitterIcon from "../../assets/icons/twitter.png";
+import instaIcon from "../../assets/icons/instagram.png";
+import linkedinIcon from "../../assets/icons/linkedin.png";
+import "./styles.css";
 
-const FollowUs = () => {
+const FollowUsSection = () => {
   return (
     <div className="footer-section follow-us">
       <h4>FOLLOW US</h4>
       <ul className="social-icons">
         <li>
-          <a  
+          <a
             href="https://www.facebook.com/profile.php?id=61559163870823"
             target="_blank"
             rel="noopener noreferrer"
@@ -51,4 +51,4 @@ const FollowUs = () => {
   );
 };
 
-export default FollowUs;
+export default FollowUsSection;

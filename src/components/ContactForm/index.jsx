@@ -1,5 +1,5 @@
 import axios from "axios";
-import Form from "../Form/index.jsx";
+import Form from "../Form";
 import {useState} from "react";
 import {constructFormData} from "../../utils.js";
 import "./styles.css";

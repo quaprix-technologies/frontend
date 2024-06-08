@@ -1,16 +1,16 @@
 import React from "react";
-import "./AboutText.css"
+import "./styles.css"
 
-const AboutText = () => {
+const AboutUsDescription = () => {
   return (
     <div className="aboutus-text about-container">
       <h1>About Us</h1>
       <p>
-        At Quaprix, we're dedicated to providing cutting-edge information
+        At Quaprix, we&apos;re dedicated to providing cutting-edge information
         technology (IT) services that drive your business forward. With our
         expertise and commitment to excellence, we offer a comprehensive suite
         of services tailored to meet your unique needs and propel your success
-        in today's digital landscape.
+        in today&apos;s digital landscape.
       </p>
       <p>
         Working as a partner with our clients, we are dedicated to developing
@@ -27,4 +27,4 @@ const AboutText = () => {
   );
 };
 
-export default AboutText;
+export default AboutUsDescription;

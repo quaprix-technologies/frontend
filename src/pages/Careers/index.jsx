@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import Jobs from "../../components/Jobs/Jobs";
+import Jobs from "../../components/Jobs/index.jsx";
 import CareerForm from "../../components/CareersForm";
 
 const Careers = () => {

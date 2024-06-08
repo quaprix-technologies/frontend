@@ -1,8 +1,8 @@
 import React from "react";
-import "./Hero.css";
-import video from "../../assets/hero_section.mp4";
+import video from "../../assets/hero-images/hero-section.mp4";
+import "./styles.css";
 
-export const Hero = () => {
+const Hero = () => {
   return (
     <div className="hero">
       <video src={video} autoPlay loop muted>
@@ -22,3 +22,5 @@ export const Hero = () => {
     </div>
   );
 };
+
+export default Hero;

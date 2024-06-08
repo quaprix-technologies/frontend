@@ -1,7 +1,7 @@
 import React from "react";
-import './CopyRight.css'
+import './styles.css'
 
-const CopyRight = () => {
+const Copyright = () => {
   return (
     <div className="copyright-footer">
       <hr />
@@ -12,4 +12,4 @@ const CopyRight = () => {
   );
 };
 
-export default CopyRight;
+export default Copyright;

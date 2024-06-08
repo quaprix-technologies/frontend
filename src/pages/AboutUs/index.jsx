@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "./About.css";
-import AboutText from "../../components/AboutText/AboutText";
-import AboutBanner from "../../components/AboutBanner/AboutBanner";
+import AboutUsBanner from "../../components/AboutUsBanner";
+import AboutUsDescription from "../../components/AboutUsDescription";
+import "./styles.css";
 
-const About = () => {
+const AboutUs = () => {
   useEffect(() => {
     document.title = "About";
   }, []);
@@ -23,10 +23,10 @@ const About = () => {
           </button>
         </div>
       </div>
-      <AboutText />
-      <AboutBanner />
+      <AboutUsDescription />
+      <AboutUsBanner />
     </div>
   );
 };
 
-export default About;
+export default AboutUs;

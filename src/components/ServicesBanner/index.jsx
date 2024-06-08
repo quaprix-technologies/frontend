@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../ContactUsBtn/Button";
+import ContactButton from "../ContactButton";
 import "./styles.css";
 
 
@@ -10,7 +10,7 @@ const ServicesBanner = () => {
         Looking for a Partner to Support Your Business Growth or <br /> Monetize
         Your Idea?
       </h1>
-      <Button />
+      <ContactButton />
     </div>
   );
 };

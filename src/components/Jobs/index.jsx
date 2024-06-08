@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import "./Jobs.css";
+import "./styles.css";
 
 const Jobs = () => {
   useEffect(() => {
     document.title = "Careers";
   }, []);
-  
+
   const jobs = [
     {
       title: "Web Developer",

@@ -1,11 +1,11 @@
 import React from "react";
-import "./Card.css";
-import teams from "../../assets/group.png";
-import mortarboard from "../../assets/mortarboard.png";
-import tech from "../../assets/coding.png";
-import Button from "../ContactUsBtn/Button";
+import ContactButton from "../ContactButton";
+import teams from "../../assets/icons/group.png";
+import mortarboard from "../../assets/icons/mortarboard.png";
+import tech from "../../assets/icons/coding.png";
+import "./styles.css";
 
-export const Card = () => {
+const WhyUsCards = () => {
   return (
     <div className="details card-container">
       <div className="card">
@@ -38,14 +38,16 @@ export const Card = () => {
           <h2 className="card-title">Technologies</h2>
           <p className="card-text">
             We offer a comprehensive range of IT services. Our services are
-            designed to help small businesses thrive in today's digital world.
+            designed to help small businesses thrive in today&apos;s digital world.
           </p>
           <a href="/services" className="learn-more">Learn More</a>
         </div>
       </div>
-      <div >
-        <Button/>
+      <div>
+        <ContactButton/>
       </div>
     </div>
   );
 };
+
+export default WhyUsCards;

@@ -1,9 +1,9 @@
 import React from "react";
-import "./Tagline.css";
-import quote_left from "../../assets/quote-left.png";
-import points from "../../assets/point.png";
+import quote_left from "../../assets/icons/quote-left.png";
+import points from "../../assets/icons/point.png";
+import "./styles.css";
 
-export const Tagline = () => {
+const Tagline = () => {
   return (
     <div className="tagline">
       <img className="quote" src={quote_left} alt="" />
@@ -16,3 +16,5 @@ export const Tagline = () => {
     </div>
   );
 };
+
+export default Tagline;

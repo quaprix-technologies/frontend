@@ -1,7 +1,7 @@
 import React from "react";
-import "./QuickLink.css";
+import "./styles.css";
 
-const QuickLink = () => {
+const QuickLinksSection = () => {
   return (
     <div className="footer-section quick-links">
       <h4>QUICK LINKS</h4>
@@ -29,4 +29,4 @@ const QuickLink = () => {
   );
 };
 
-export default QuickLink;
+export default QuickLinksSection;

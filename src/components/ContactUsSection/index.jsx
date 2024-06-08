@@ -1,10 +1,10 @@
 import React from "react";
-import "./Contact.css";
-import mailIcon from "../../assets/mail-icon.png";
-import locationIcon from "../../assets/location-icon.png";
-import phoneIcon from "../../assets/phone-icon.png";
+import locationIcon from "../../assets/icons/location-icon.png";
+import mailIcon from "../../assets/icons/mail-icon.png";
+import phoneIcon from "../../assets/icons/phone-icon.png";
+import "./styles.css";
 
-const Contact = () => {
+const ContactUsSection = () => {
   return (
     <div className="footer-section contact-section">
       <h4>CONTACT US</h4>
@@ -25,4 +25,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactUsSection;
