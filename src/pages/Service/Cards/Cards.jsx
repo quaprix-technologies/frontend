@@ -59,7 +59,7 @@ const Section = ({ icon, title, rows, isOpen, onClick }) => (
 );
 
 const App = () => {
-  const [openSectionIndex, setOpenSectionIndex] = useState(null);
+  const [openSectionIndex, setOpenSectionIndex] = useState(0);
 
   const sections = [
     {
