@@ -1,4 +1,4 @@
-nav {
+header {
   width: 100%;
   height: 80px;
   color: #000;
@@ -7,7 +7,7 @@ nav {
   background: #fff;
   display: flex;
   align-items: center;
-  justify-content:  space-between;
+  justify-content: space-between;
   z-index: 10;
 }
 
@@ -15,7 +15,7 @@ nav {
   width: 180px;
 }
 
-nav ul li {
+header ul li {
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
@@ -23,7 +23,7 @@ nav ul li {
   font-weight: 500;
 }
 
-nav ul li a:hover {
+header ul li a:hover {
   color: #011555;
   text-decoration: underline 2px;
   transition: 0.4s ease-in;
@@ -34,7 +34,6 @@ nav ul li a:hover {
   padding-right: 10%;
 }
 
-
 .menu-icon {
   display: none;
 }
@@ -43,19 +42,19 @@ nav ul li a:hover {
   .logo {
     width: 140px;
   }
-  nav ul li {
+  header ul li {
     margin: 10px 15px;
   }
 }
 
 @media (max-width: 840px) {
-  nav {
+  header {
     padding: 15px 0;
     height: 60px;
     background: #fff;
   }
 
-  nav ul {
+  header ul {
     position: fixed;
     top: 0;
     right: 0;
@@ -66,7 +65,7 @@ nav ul li a:hover {
     padding-top: 70px;
     transition: 0.5s;
   }
-  nav ul li {
+  header ul li {
     display: block;
     margin: 25px 40px;
     color: #000;

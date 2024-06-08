@@ -11,7 +11,7 @@ export const Header = () => {
   };
 
   return (
-    <nav className="container">
+    <header className="container">
       <a href="/">
       <img className="logo"  src={quaprix} alt="Image not found" />
       </a>
@@ -48,6 +48,6 @@ export const Header = () => {
         className="menu-icon"
         onClick={toggleMenu}
       />
-    </nav>
+    </header>
   );
 };
