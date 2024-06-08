@@ -23,9 +23,11 @@
 .career-section-text h1 {
   font-size: 5rem;
 }
-.career-section-text p{
-font-size: 1.5rem;
+
+.career-section-text p {
+  font-size: 1.5rem;
 }
+
 .open-positions h1 {
   text-align: center;
   padding: 2% 0;
@@ -71,5 +73,15 @@ font-size: 1.5rem;
   .career-section-text p {
     padding-top: 2%;
     font-size: 1rem;
+  }
+
+  .open-positions h1 {
+    font-size: 2rem;
+  }
+
+  .open-positions h3 {
+    font-size: 1.5rem;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 }
