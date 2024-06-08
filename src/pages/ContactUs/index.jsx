@@ -13,9 +13,8 @@ const ContactUs = () => {
 
   return (
     <div>
-      <div className="hero-section">
-        <img src={backgroundImg} alt="Contact Us Background" />
-        <div className="hero-text">
+      <div className="contactus">
+        <div className="contactus-text">
           <h1>Get In Touch</h1>
           <p>We&apos;d love to hear from you</p>
         </div>

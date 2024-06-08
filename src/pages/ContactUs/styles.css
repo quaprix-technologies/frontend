@@ -1,33 +1,25 @@
-.hero-section {
+.contactus {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  background-image: url("../../assets/ContactUs.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-section img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-text {
+.contactus-text {
   position: absolute;
   top: 50%;
-  left: 28%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  left: 5%;
+  color: #fff;
 }
 
-.hero-text h1 {
-  font-size: 80px;
-  margin: 0;
+.contactus-text h1 {
+  font-size: 6rem;
 }
 
-.hero-text p {
-  font-size: 30px;
-  margin: 10px 0 0 0;
+.contactus-text p {
+  font-size: 2rem;
 }
 
 .contact {
@@ -37,7 +29,6 @@
   padding: 20px;
   margin: 80px auto;
   max-width: 90%;
-  align-content: center;
 }
 
 .contact-col {
@@ -46,7 +37,6 @@
 }
 
 .contact-form span {
-  display: block;
   margin: 20px;
 }
 
@@ -54,8 +44,6 @@
   color: #000f38;
   font-weight: 500;
   font-size: 30px;
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -74,57 +62,16 @@
     padding: 20px;
     flex-basis: 100%;
   }
-  .hero-section {
-    height: auto;
-    width: 100%;
-  }
-  .hero-text {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .hero-text h1 {
-    font-size: 40px;
-  }
-  .hero-text p {
-    font-size: 25px;
-  }
 }
 
-@media (max-width: 600px) {
-  .hero-section {
-    height: auto;
-    width: 100%;
+@media screen and (max-width: 650px) {
+  .contactus-text {
+    padding-top: 10%;
   }
-  .hero-text {
-    left: 30%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  .contactus-text h1 {
+    font-size: 2.5rem;
   }
-  .hero-text h1 {
-    font-size: 30px;
-  }
-  .hero-text p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 450px) {
-  .hero-section {
-    height: auto;
-    width: 100%;
-  }
-  .hero-text {
-    top: 100px;
-    bottom: auto;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .hero-text h1 {
-    font-size: 20px;
-  }
-  .hero-text p {
-    font-size: 15px;
+  .contactus-text p {
+    font-size: 2rem;
   }
 }
