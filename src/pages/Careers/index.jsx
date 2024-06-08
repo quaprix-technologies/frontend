@@ -5,9 +5,9 @@ import CareerForm from "../../components/CareersForm";
 
 const Careers = () => {
   return (
-    <div className="hero-section">
-      <div className="hero-background">
-        <div className="hero-text">
+    <div className="career-section">
+      <div className="career-banner">
+        <div className="career-section-text">
           <h1>Work At Quaprix</h1>
           <p>
             Learn about what we do and how you can help <br /> us make it
