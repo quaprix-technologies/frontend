@@ -1,12 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { navigateAndScrollToElement } from "../../utils.js";
+import { CONTACT_US_PAGE_PATH } from "../../constants.js";
 import "./styles.css";
 
 const ContactButton = () => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate("/contact-us");
+    navigateAndScrollToElement(
+      navigate,
+      CONTACT_US_PAGE_PATH,
+      "contact-us-container"
+    );
   };
 
   return (
