@@ -1,23 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {scrollToElement} from "../../../utils.js";
 import {sections} from "../services-data.js";
+import Card from "../../../components/Card/index.jsx";
 import "./styles.css";
-
-const ServiceCard = ({ icon, title, content }) => (
-  <div className="service-card">
-    <div className="card-header">
-      <div className="card-icon-container">
-        {icon && <img src={icon} alt="icon" className="card-icon" />}
-      </div>
-      <div className="card-title">
-        <h3>{title}</h3>
-      </div>
-    </div>
-    <div className="card-content">
-      <p>{content}</p>
-    </div>
-  </div>
-);
 
 const ServicesSection = ({ id, icon, title, rows, isOpen, onClick }) => (
   <div className="section" id={id}>
@@ -30,7 +15,7 @@ const ServicesSection = ({ id, icon, title, rows, isOpen, onClick }) => (
         {rows.map((row, index) => (
           <div className="row" key={index}>
             {row.map((card, cardIndex) => (
-              <ServiceCard
+              <Card
                 key={cardIndex}
                 icon={card.icon}
                 title={card.title}
