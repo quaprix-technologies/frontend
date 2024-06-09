@@ -10,13 +10,11 @@
   margin: 20px 5px;
   padding-top: 12px;
   font-weight: 500;
-}
-
-.quick-links a {
   text-decoration: none;
   color: black;
 }
 
-.quick-links a:hover {
+.quick-links li:hover {
   text-decoration: underline 2px;
+  cursor: pointer;
 }

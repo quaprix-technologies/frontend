@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./styles.css";
 
-const index = () => {
+const PrivacyPolicy = () => {
 
   useEffect(() => {
     document.title = "Privacy Policy";
@@ -106,4 +106,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default PrivacyPolicy;

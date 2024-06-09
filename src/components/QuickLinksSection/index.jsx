@@ -1,29 +1,36 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
+import {
+  ABOUT_US_PAGE_PATH,
+  CAREERS_PAGE_PATH,
+  CONTACT_US_PAGE_PATH,
+  HOME_PAGE_PATH, PRIVACY_POLICY_PAGE_PATH,
+  SERVICES_PAGE_PATH, TERMS_AND_CONDITIONS_PAGE_PATH
+} from "../../constants.js";
 import "./styles.css";
 
 const QuickLinksSection = () => {
+  const navigate = useNavigate();
+
+  const quickLinks = [
+    {label: 'Home', path: HOME_PAGE_PATH},
+    {label: 'Services', path: SERVICES_PAGE_PATH},
+    {label: 'About Us', path: ABOUT_US_PAGE_PATH},
+    {label: 'Contact Us', path: CONTACT_US_PAGE_PATH},
+    {label: 'Careers', path: CAREERS_PAGE_PATH},
+    {label: 'Privacy Policy', path: PRIVACY_POLICY_PAGE_PATH},
+    {label: 'Terms and Conditions', path: TERMS_AND_CONDITIONS_PAGE_PATH},
+  ]
+
   return (
     <div className="footer-section quick-links">
       <h4>QUICK LINKS</h4>
       <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/services">Services</a>
-        </li>
-        <li>
-          <a href="/about-us">About Us</a>
-        </li>
-        <li>
-          <a href="/contact-us">Contact Us</a>
-        </li>
-        <li>
-          <a href="/privacy-policy">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="/term-condition">Term and Condition</a>
-        </li>
+        {quickLinks.map((quickLink) => {
+          return <li key={quickLink.path}>
+              <div onClick={() => navigate(quickLink.path)}>{quickLink.label}</div>
+          </li>
+        })}
       </ul>
     </div>
   );
