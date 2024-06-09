@@ -11,7 +11,7 @@
   background-position: center;
 }
 
-.career-section-text {
+.career-banner-text {
   position: absolute;
   left: 15%;
   top: 50%;
@@ -20,11 +20,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.career-section-text h1 {
+.career-banner-text h1 {
   font-size: 5rem;
 }
 
-.career-section-text p {
+.career-banner-text p {
   font-size: 1.5rem;
 }
 
@@ -43,34 +43,34 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .career-section-text {
+  .career-banner-text {
     left: 30%;
     top: 50%;
     transform: translate(-40%, -50%);
   }
 
-  .career-section-text h1 {
+  .career-banner-text h1 {
     font-size: 2.5rem;
   }
 
-  .career-section-text p {
+  .career-banner-text p {
     padding-top: 2%;
     font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .career-section-text {
+  .career-banner-text {
     left: 40%;
     top: 50%;
     transform: translate(-40%, -50%);
   }
 
-  .career-section-text h1 {
+  .career-banner-text h1 {
     font-size: 1.5rem;
   }
 
-  .career-section-text p {
+  .career-banner-text p {
     padding-top: 2%;
     font-size: 1rem;
   }

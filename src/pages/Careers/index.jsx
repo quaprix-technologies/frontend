@@ -7,7 +7,7 @@ const Careers = () => {
   return (
     <div className="career-section">
       <div className="career-banner">
-        <div className="career-section-text">
+        <div className="career-banner-text">
           <h1>Work At Quaprix</h1>
           <p>
             Learn about what we do and how you can help <br /> us make it

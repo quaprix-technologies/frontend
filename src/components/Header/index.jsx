@@ -10,7 +10,6 @@ const Header = () => {
     setMobileMenu((prevMobileMenu) => !prevMobileMenu);
   };
 
-  // Function to check if the current page matches the link
   const isCurrentPage = (href) => {
     return window.location.pathname === href;
   };
