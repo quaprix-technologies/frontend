@@ -18,7 +18,7 @@ const ContactUs = () => {
           <p>We&apos;d love to hear from you</p>
         </div>
       </div>
-      <div className="contact"  id="contact-us-container">
+      <div className="contact" id="contact-us-container">
         <div className="contact-col">
           <h3>
             Send us a message <img src={msgIcon} alt="Message Icon" />
