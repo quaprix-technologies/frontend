@@ -9,6 +9,13 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Term_Condition from "./pages/TermsAndConditions";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import {
+  ABOUT_US_PAGE_PATH, CAREERS_PAGE_PATH,
+  CONTACT_US_PAGE_PATH,
+  HOME_PAGE_PATH,
+  PRIVACY_POLICY_PAGE_PATH, SERVICES_PAGE_PATH,
+  TERMS_AND_CONDITIONS_PAGE_PATH
+} from "./constants.js";
 
 const App = () => {
   const FullPage = ({ children }) => (
@@ -21,7 +28,7 @@ const App = () => {
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: HOME_PAGE_PATH,
       element: (
         <FullPage>
           <Homepage />
@@ -29,7 +36,7 @@ const App = () => {
       ),
     },
     {
-      path: "/contact-us",
+      path: CONTACT_US_PAGE_PATH,
       element: (
         <FullPage>
           <ContactUs />
@@ -37,7 +44,7 @@ const App = () => {
       ),
     },
     {
-      path: "/about-us",
+      path: ABOUT_US_PAGE_PATH,
       element: (
         <FullPage>
           <AboutUs />
@@ -45,7 +52,7 @@ const App = () => {
       ),
     },
     {
-      path: "/privacy-policy",
+      path: PRIVACY_POLICY_PAGE_PATH,
       element: (
         <FullPage>
           <PrivacyPolicy />
@@ -53,7 +60,7 @@ const App = () => {
       ),
     },
     {
-      path: "/term-condition",
+      path: TERMS_AND_CONDITIONS_PAGE_PATH,
       element: (
         <FullPage>
           <Term_Condition />
@@ -61,7 +68,7 @@ const App = () => {
       ),
     },
     {
-      path: "/services",
+      path: SERVICES_PAGE_PATH,
       element: (
         <FullPage>
           <Services />
@@ -69,7 +76,7 @@ const App = () => {
       ),
     },
     {
-      path: "/careers",
+      path: CAREERS_PAGE_PATH,
       element: (
         <FullPage>
           <Careers />

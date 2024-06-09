@@ -11,29 +11,13 @@ header {
   z-index: 10;
 }
 
-.logo {
+.quaprix-logo {
   width: 180px;
 }
 
-header ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 5px 20px;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-header ul li a:hover {
-  color: #003493;
-}
-
-.container {
+.header-container {
   padding-left: 5%;
   padding-right: 10%;
-}
-
-.active a {
-  text-decoration: underline 2px;
 }
 
 .menu-icon {
@@ -41,7 +25,7 @@ header ul li a:hover {
 }
 
 @media (max-width: 1000px) {
-  .logo {
+  .quaprix-logo {
     width: 140px;
   }
   header ul li {

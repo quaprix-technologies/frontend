@@ -68,7 +68,7 @@ const ContactForm = () => {
         Message: ${message} \n`;
 
     const formData = constructFormData({
-      to: process.env.REACT_APP_EMAIL_RECEIVER,
+      to: 'vprince001@gmail.com',
       subject: "Query for IT Services",
       text
     });

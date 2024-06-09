@@ -2,7 +2,7 @@
   position: relative;
   height: 50vh;
   margin-top: 5%;
-  background-image: url("src/assets/banners/about-section.png");
+  background-image: url("../../assets/banners/about-section.png");
   background-size: cover;
   background-position: center;
 }

@@ -1,0 +1,15 @@
+.active {
+    text-decoration: underline 2px;
+}
+
+header ul .navbar-item {
+    display: inline-block;
+    margin: 5px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header ul .navbar-item:hover {
+    color: #003493;
+    cursor: pointer;
+}

@@ -91,7 +91,7 @@ const CareerForm = () => {
         Service: ${option} \n`;
 
     const formData = constructFormData({
-      to: process.env.REACT_APP_EMAIL_RECEIVER,
+      to: 'vprince001@gmail.com',
       subject: "Job Application",
       text,
       file

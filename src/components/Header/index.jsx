@@ -1,58 +1,36 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import NavbarItem from "./NavbarItem";
+import {HOME_PAGE_PATH, SERVICES_PAGE_PATH, ABOUT_US_PAGE_PATH, CONTACT_US_PAGE_PATH, CAREERS_PAGE_PATH} from "../../constants.js";
 import quaprix from "../../assets/icons/quaprix.png";
-import menu_icon from "../../assets/icons/menu.png";
+import menu_icon from "../../assets/icons/menu-icon.png";
 import "./styles.css";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMobileMenu((prevMobileMenu) => !prevMobileMenu);
   };
 
-  const isCurrentPage = (href) => {
-    return window.location.pathname === href;
-  };
+  const handleOnClick = (path) => {
+    toggleMenu();
+    navigate(path);
+  }
 
   return (
-    <header className="container">
-      <a href="/">
-        <img className="logo"  src={quaprix} alt="Image not found" />
-      </a>
-      <ul className={mobileMenu ? "show-mobile-menu" : "hide-mobile-menu"}>
-        <li className={isCurrentPage("/") ? "active" : ""}>
-          <a href="/" onClick={toggleMenu}>
-            Home
-          </a>
-        </li>
-        <li className={isCurrentPage("/services") ? "active" : ""}>
-          <a href="/services" onClick={toggleMenu}>
-            Services
-          </a>
-        </li>
-        <li className={isCurrentPage("/about-us") ? "active" : ""}>
-          <a href="/about-us" onClick={toggleMenu}>
-            About Us
-          </a>
-        </li>
-        <li className={isCurrentPage("/contact-us") ? "active" : ""}>
-          <a href="/contact-us" onClick={toggleMenu}>
-            Contact Us
-          </a>
-        </li>
-        <li className={isCurrentPage("/careers") ? "active" : ""}>
-          <a href="/careers" onClick={toggleMenu}>
-            Careers
-          </a>
-        </li>
-      </ul>
-      <img
-        src={menu_icon}
-        alt="Menu icon"
-        className="menu-icon"
-        onClick={toggleMenu}
-      />
-    </header>
+      <header className="header-container">
+          <img className="quaprix-logo" src={quaprix} alt="image not found" onClick={() => handleOnClick(HOME_PAGE_PATH)}/>
+          <ul className={mobileMenu ? "show-mobile-menu" : "hide-mobile-menu"}>
+              <NavbarItem path={HOME_PAGE_PATH} onClick={handleOnClick}>Home</NavbarItem>
+              <NavbarItem path={SERVICES_PAGE_PATH} onClick={handleOnClick}>Services</NavbarItem>
+              <NavbarItem path={ABOUT_US_PAGE_PATH} onClick={handleOnClick}>About Us</NavbarItem>
+              <NavbarItem path={CONTACT_US_PAGE_PATH} onClick={handleOnClick}>Contact Us</NavbarItem>
+              <NavbarItem path={CAREERS_PAGE_PATH} onClick={handleOnClick}>Careers</NavbarItem>
+          </ul>
+          <img src={menu_icon} alt="Menu icon" className="menu-icon" onClick={toggleMenu}/>
+      </header>
   );
 };
 
