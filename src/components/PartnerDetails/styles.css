@@ -29,6 +29,13 @@
   transform: scale(1.2);
 }
 
+.partner-icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 @media (min-width: 900px) {
   .partner-icon:hover {
     transform: scale(1.1);

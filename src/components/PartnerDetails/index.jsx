@@ -3,12 +3,16 @@ import partner_icon from "../../assets/icons/partner-icon.png";
 import "./styles.css";
 
 const PartnerDetails = () => {
+  const handleOnClick = () => {
+    window.open("https://www.qualitydynamics.net/", "_blank");
+  };
+
   return (
     <div className="partnersdetails">
-      <h2>Our Partner </h2>
-      <a href="https://www.qualitydynamics.net/" target="_blank">
-        <img src={partner_icon} alt="" className="partner-icon" />
-      </a>
+      <h2>Our Partner</h2>
+      <button className="partner-icon-btn" onClick={handleOnClick}>
+        <img src={partner_icon} alt="Partner Icon" className="partner-icon" />
+      </button>
     </div>
   );
 };
