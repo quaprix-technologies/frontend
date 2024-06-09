@@ -1,29 +1,19 @@
-import React, { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { CONTACT_US_PAGE_PATH } from "../../constants.js";
+import { navigateAndScrollToElement } from "../../utils.js";
 import "./styles.css";
 
 const ContactButton = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleOnClick = () => {
-    navigate("/contact-us");
-    if (location.pathname === "/contact-us") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    navigateAndScrollToElement(
+      navigate,
+      CONTACT_US_PAGE_PATH,
+      "contact-us-container"
+    );
   };
-
-  useEffect(() => {
-    if (location.pathname === "/contact-us") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  }, [location.pathname]);
 
   return (
     <div>
