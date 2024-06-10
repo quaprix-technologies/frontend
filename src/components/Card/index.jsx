@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { SERVICES_PAGE_PATH } from "../../constants.js";
 import "./style.css";
 
-const Card = ({ icon, title, content, Url }) => {
+const Card = ({ icon, title, content, url }) => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
@@ -24,7 +24,7 @@ const Card = ({ icon, title, content, Url }) => {
         <p>{content}</p>
       </div>
       <div className="card-url" onClick={handleOnClick}>
-        {Url}
+        {url}
       </div>
     </div>
   );

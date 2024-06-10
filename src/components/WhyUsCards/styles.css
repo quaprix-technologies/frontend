@@ -8,15 +8,16 @@
   margin-bottom: 40px;
 }
 
-.why-us-card-container .card {
+.why-us-card-container > * {
   background-color: #f5f5f5;
   transition: transform 0.3s ease-in-out;
 }
 
-.why-us-card-container .card:hover {
+.why-us-card-container > *:hover {
   transform: scale(1.2);
 }
 
 .why-us-card-button {
   margin-top: 40px;
+  background: none;
 }
