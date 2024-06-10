@@ -20,16 +20,16 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleOutSide = (event) => {
+    const outsideClickHandler = (event) => {
       if (mobileMenu && !event.target.closest(".header-container")) {
         setMobileMenu(false);
       }
     };
 
     if (mobileMenu) {
-      document.addEventListener("click", handleOutSide);
+      document.addEventListener("click", outsideClickHandler);
     } else {
-      document.removeEventListener("click", handleOutSide);
+      document.removeEventListener("click", outsideClickHandler);
     }
   }, [mobileMenu]);
 
