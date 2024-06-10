@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import NavbarItem from "./NavbarItem";
 import {HOME_PAGE_PATH, SERVICES_PAGE_PATH, ABOUT_US_PAGE_PATH, CONTACT_US_PAGE_PATH, CAREERS_PAGE_PATH} from "../../constants.js";
@@ -17,7 +17,21 @@ const Header = () => {
   const handleOnClick = (path) => {
     toggleMenu();
     navigate(path);
-  }
+  };
+
+  useEffect(() => {
+    const handleOutSide = (event) => {
+      if (mobileMenu && !event.target.closest(".header-container")) {
+        setMobileMenu(false);
+      }
+    };
+
+    if (mobileMenu) {
+      document.addEventListener("click", handleOutSide);
+    } else {
+      document.removeEventListener("click", handleOutSide);
+    }
+  }, [mobileMenu]);
 
   return (
       <header className="header-container">
