@@ -1,6 +1,6 @@
 .service-banner {
      position: relative;
-     height: 50vh;
+     height: 60vh;
      background-image: url("../../assets/banners/service-banner.png");
      background-size: cover;
      background-position: center;
@@ -13,12 +13,12 @@
      font-size: 2rem;
    }
 
-   @media screen and (max-width: 1024px) {
+   @media screen and (max-width: 1100px) {
      .service-banner {
-       height: 40vh;
+       height: 70vh;
      }
      .service-banner h1 {
-       padding: 10% 10% 8% 10%;
+       padding: 20% 15% 15% 10%;
        font-size: 1.5rem;
      }
    }
