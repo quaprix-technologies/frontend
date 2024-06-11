@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {scrollToElement} from "../../../utils.js";
 import {sections} from "../services-data.js";
-import Card from "../../../components/Card/index.jsx";
+import Card from "../../../components/Card";
 import "./styles.css";
 
 const ServicesSection = ({ id, icon, title, rows, isOpen, onClick }) => (
