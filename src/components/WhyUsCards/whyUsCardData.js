@@ -20,6 +20,6 @@ export const data = [
     title: "Technologies",
     content:
       "We offer a comprehensive range of IT services. Our services are designed to help small businesses thrive in today's digital world.",
-    url: "Learn More",
+    linkLable: "Learn More",
   },
 ];

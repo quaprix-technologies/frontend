@@ -1,15 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { SERVICES_PAGE_PATH } from "../../constants.js";
 import "./style.css";
 
-const Card = ({ icon, title, content, url }) => {
-  const navigate = useNavigate();
-
-  const handleOnClick = () => {
-    navigate(SERVICES_PAGE_PATH);
-  };
-
+const Card = ({ icon, title, content, linkLable, onLinkClick }) => {
   return (
     <div className="card">
       <div className="card-header">
@@ -23,9 +15,11 @@ const Card = ({ icon, title, content, url }) => {
       <div className="card-content">
         <p>{content}</p>
       </div>
-      <div className="card-url" onClick={handleOnClick}>
-        {url}
-      </div>
+      {linkLable ? (
+        <div className="card-linklable" onClick={onLinkClick}>
+          {linkLable}
+        </div>
+      ): null}
     </div>
   );
 };

@@ -41,7 +41,7 @@
   text-align: center;
 }
 
-.card-url {
+.card-linklable {
   font-size: 1.5rem;
   cursor: pointer;
   padding-bottom: 20px;
@@ -49,16 +49,14 @@
   text-decoration: underline;
 }
 
-.card-url:hover {
+.card-linklable:hover {
   color: #11016e;
   text-decoration: none;
 }
 
 @media screen and (max-width: 1050px) {
   .card {
-    .card {
-      width: 95%;
-      max-width: none;
-    }
+    width: 95%;
+    max-width: none;
   }
 }
