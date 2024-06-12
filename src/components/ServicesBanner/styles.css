@@ -1,24 +1,39 @@
 .service-banner {
-     position: relative;
-     height: 60vh;
-     background-image: url("../../assets/banners/service-banner.png");
-     background-size: cover;
-     background-position: center;
-   }
+  position: relative;
+  height: 50vh;
+  background-image: url("../../assets/banners/service-banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
 
-   .service-banner h1 {
-     padding: 4% 4% 5%;
-     box-shadow: #000;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-     font-size: 2rem;
-   }
+.service-banner h1 {
+  margin: 0;
+  padding-top: 20px;
+  color: #000;
+  font-size: 1.8rem;
+}
 
-   @media screen and (max-width: 1100px) {
-     .service-banner {
-       height: 45vh;
-     }
-     .service-banner h1 {
-       padding: 10% 5% 15% 10%;
-       font-size: 1.5rem;
-     }
-   }
+.service-button {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .service-banner {
+    padding-left: 20px;
+    height: 40vh;
+  }
+
+  .service-banner h1 {
+    padding-top: 10px;
+    font-size: 25px;
+  }
+
+  .service-button {
+    margin-top: 20px;
+  }
+}

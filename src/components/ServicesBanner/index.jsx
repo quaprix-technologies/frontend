@@ -10,7 +10,9 @@ const ServicesBanner = () => {
         Looking for a Partner to Support Your Business Growth or <br /> Monetize
         Your Idea?
       </h1>
+      <div className="service-button">
       <ContactButton />
+      </div>
     </div>
   );
 };
