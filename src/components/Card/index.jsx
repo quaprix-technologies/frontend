@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Card = ({ icon, title, content, linkLable, onLinkClick }) => {
+const Card = ({ icon, title, content, linkLabel, onLinkClick }) => {
   return (
     <div className="card">
       <div className="card-header">
@@ -15,9 +15,9 @@ const Card = ({ icon, title, content, linkLable, onLinkClick }) => {
       <div className="card-content">
         <p>{content}</p>
       </div>
-      {linkLable ? (
+      {linkLabel ? (
         <div className="card-linklable" onClick={onLinkClick}>
-          {linkLable}
+          {linkLabel}
         </div>
       ): null}
     </div>

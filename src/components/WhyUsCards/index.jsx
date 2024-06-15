@@ -1,31 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { SERVICES_PAGE_PATH } from "../../constants.js";
 import Card from "../Card";
-import { data } from "./whyUsCardData.js";
 import ContactButton from "../ContactButton";
+import Data from "./whyUsCardData.js";
+import { SERVICES_PAGE_PATH } from "../../constants.js";
 import "./styles.css";
 
 const WhyUsCards = () => {
-
   const navigate = useNavigate();
-
-  const handleOnClick = () => {
-    navigate(SERVICES_PAGE_PATH);
-  };
 
   return (
     <div className="why-us-card-container">
-      {data.map((cardData, index) => {
-        const { icon, title, content, linkLable } = cardData;
+      {Data.map((cardData, index) => {
+        const { icon, title, content, linkLabel } = cardData;
         return (
           <div key={index} className="why-us-card">
             <Card
               icon={icon}
               title={title}
               content={content}
-              linkLable={linkLable}
-              onLinkClick={() => handleOnClick(linkLable)}
+              linkLabel={linkLabel}
+              onLinkClick={() => navigate(SERVICES_PAGE_PATH)}
             />
           </div>
         );
