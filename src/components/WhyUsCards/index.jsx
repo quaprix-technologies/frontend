@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "../Card";
 import ContactButton from "../ContactButton";
-import Data from "./whyUsCardData.js";
+import WHY_US_CARDS_DATA from "./whyUsCardsData.js";
 import { SERVICES_PAGE_PATH } from "../../constants.js";
 import "./styles.css";
 
@@ -11,7 +11,7 @@ const WhyUsCards = () => {
 
   return (
     <div className="why-us-card-container">
-      {Data.map((cardData, index) => {
+      {WHY_US_CARDS_DATA.map((cardData, index) => {
         const { icon, title, content, linkLabel } = cardData;
         return (
           <div key={index} className="why-us-card">

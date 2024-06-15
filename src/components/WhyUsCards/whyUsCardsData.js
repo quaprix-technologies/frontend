@@ -2,7 +2,7 @@ import group_icon from "../../assets/icons/group.png";
 import mortarboard_icon from "../../assets/icons/mortarboard.png";
 import tech_icon from "../../assets/icons/coding.png";
 
-const Data = [
+const WHY_US_CARDS_DATA = [
   {
     icon: group_icon,
     title: "Our Story",
@@ -24,4 +24,4 @@ const Data = [
   },
 ];
 
-export default Data;
+export default WHY_US_CARDS_DATA;
