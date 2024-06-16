@@ -16,7 +16,7 @@ const Card = ({ icon, title, content, linkLabel, onLinkClick }) => {
         <p>{content}</p>
       </div>
       {linkLabel ? (
-        <div className="card-linklable" onClick={onLinkClick}>
+        <div className="card-link-label" onClick={onLinkClick}>
           {linkLabel}
         </div>
       ): null}
