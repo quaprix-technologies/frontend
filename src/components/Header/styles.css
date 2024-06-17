@@ -33,7 +33,7 @@ header {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
   header {
     padding: 15px 0;
     height: 60px;
