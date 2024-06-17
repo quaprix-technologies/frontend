@@ -1,7 +1,8 @@
 import axios from "axios";
 import {useState} from "react";
 import Form from "../Form";
-import {constructFormData, getBaseUrl} from "../../utils.js";
+import {constructFormData, getBaseUrl, getFormReceiverEmail} from "../../utils.js";
+import {CONTACT_FORM} from "../../constants.js";
 import "./styles.css";
 
 const ContactForm = () => {
@@ -69,7 +70,7 @@ const ContactForm = () => {
         Message: ${message} \n`;
 
     const formData = constructFormData({
-      to: 'vprince001@gmail.com',
+      to: getFormReceiverEmail(CONTACT_FORM),
       subject: "Query for IT Services",
       text
     });

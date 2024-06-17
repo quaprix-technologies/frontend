@@ -1,7 +1,8 @@
 import React, {useRef, useState} from "react";
 import axios from "axios";
 import Form from "../Form";
-import {constructFormData, getBaseUrl} from "../../utils.js";
+import {constructFormData, getBaseUrl, getFormReceiverEmail} from "../../utils.js";
+import {CAREERS_FORM} from "../../constants.js";
 import "./styles.css";
 
 const CareerForm = () => {
@@ -92,7 +93,7 @@ const CareerForm = () => {
         Service: ${option} \n`;
 
     const formData = constructFormData({
-      to: 'vprince001@gmail.com',
+      to: getFormReceiverEmail(CAREERS_FORM),
       subject: "Job Application",
       text,
       file

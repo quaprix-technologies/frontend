@@ -1,3 +1,7 @@
+import {CAREERS_FORM, CONTACT_FORM} from "./constants.js";
+
+const {VITE_APP_CONTACT_FORM_EMAIL_RECEIVER, VITE_APP_CAREERS_FORM_EMAIL_RECEIVER} = import.meta.env;
+
 export const constructFormData = ({ to, subject, text, ...rest }) => {
   const formData = new FormData();
   formData.append("to", to);
@@ -38,4 +42,13 @@ export const navigateAndScrollToElement = (navigate, path, elementId) => {
 export const getBaseUrl = () => {
   const baseUrl = import.meta.env.VITE_BASE_URL;
   return baseUrl ? baseUrl.trim() : '';
+}
+
+export const getFormReceiverEmail = (formName) => {
+  switch (formName) {
+    case CONTACT_FORM:
+      return VITE_APP_CONTACT_FORM_EMAIL_RECEIVER;
+    case CAREERS_FORM:
+      return VITE_APP_CAREERS_FORM_EMAIL_RECEIVER;
+  }
 }
