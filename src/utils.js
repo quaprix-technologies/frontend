@@ -34,3 +34,8 @@ export const navigateAndScrollToElement = (navigate, path, elementId) => {
     }, 1);
   }
 };
+
+export const getBaseUrl = () => {
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+  return baseUrl ? baseUrl.trim() : '';
+}

@@ -4,5 +4,5 @@ import environment from 'vite-plugin-environment';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), environment(['REACT_APP_EMAIL_RECEIVER'])],
+  plugins: [react(), environment(['VITE_BASE_URL', 'VITE_APP_EMAIL_RECEIVER'])],
 })

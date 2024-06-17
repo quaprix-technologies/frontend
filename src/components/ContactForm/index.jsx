@@ -1,7 +1,7 @@
 import axios from "axios";
-import Form from "../Form";
 import {useState} from "react";
-import {constructFormData} from "../../utils.js";
+import Form from "../Form";
+import {constructFormData, getBaseUrl} from "../../utils.js";
 import "./styles.css";
 
 const ContactForm = () => {
@@ -9,6 +9,7 @@ const ContactForm = () => {
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const baseURL = getBaseUrl();
 
   const fields = [
     {
@@ -74,7 +75,8 @@ const ContactForm = () => {
     });
 
     try {
-      await axios.post("http://localhost:8080/contact-form", formData)
+      const contactFormUrl = `${baseURL}/api/contact-form`;
+      await axios.post(contactFormUrl, formData)
       resetForm();
       alert("Form submitted successfully!");
     } catch (error) {

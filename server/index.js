@@ -7,9 +7,12 @@ const contactFormHandler = require("./src/handlers/contactFormHandler");
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.SERVER_PORT || 8080;
+const PORT = process.env.SERVER_PORT || 4000;
 
-app.use(cors());
+app.use(cors({
+  origin: true,
+  credentials: true,
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -20,6 +23,6 @@ app.listen(PORT, () => {
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-app.post("/careers-form", upload.single("file"), careersFormHandler);
+app.post("/api/contact-form", upload.none(), contactFormHandler);
 
-app.post("/contact-form", upload.none(), contactFormHandler);
+app.post("/api/careers-form", upload.single("file"), careersFormHandler);
