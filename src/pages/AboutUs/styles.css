@@ -18,7 +18,7 @@
   max-width: 40%;
 }
 
-.get-started-btn {
+.about-us-section-button {
   background: none;
   color: #fff;
   padding: 15px 30px;
@@ -48,7 +48,7 @@
     font-size: 3vw;
     top: 25%;
   }
-  .get-started-btn {
+  .about-us-section-button {
     font-size: 0.875rem;
     padding: 10px 20px;
   }
@@ -67,7 +67,7 @@
     right: 4%;
     top: 25%;
   }
-  .get-started-btn {
+  .about-us-section-button {
     font-size: 0.75rem;
     padding: 8px 16px;
   }

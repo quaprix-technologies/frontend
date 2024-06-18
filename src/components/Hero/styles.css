@@ -41,23 +41,7 @@
   margin-top: 20px;
 }
 
-.btn {
-  padding: 1rem 2rem;
-  font-size: 1.25rem;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.bottom-btn {
+.hero-section-button {
   position: absolute;
   bottom: 40px;
   left: 50%;
@@ -73,12 +57,11 @@
   transition: background-color 0.3s ease;
 }
 
-.bottom-btn:hover {
+.hero-section-button:hover {
   background-color: #000e3d;
   color: #fff;
 }
 
-/* Responsive Styles */
 @media (max-width: 1200px) {
   .text-wrap h1 {
     font-size: 3.5rem;
@@ -88,8 +71,7 @@
     font-size: 1.25rem;
   }
 
-  .btn,
-  .bottom-btn {
+  .hero-section-button {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
   }
@@ -104,8 +86,7 @@
     font-size: 1rem;
   }
 
-  .btn,
-  .bottom-btn {
+  .hero-section-button {
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
   }
@@ -120,8 +101,7 @@
     font-size: 0.875rem;
   }
 
-  .btn,
-  .bottom-btn {
+  .hero-section-button {
     font-size: 0.75rem;
     padding: 0.5rem 0.75rem;
   }
