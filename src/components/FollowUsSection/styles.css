@@ -23,9 +23,5 @@
 
 .social-icons img:hover {
   transform: scale(1.5);
-}
-
-.follow-us a {
-  text-decoration: none;
-  color: black;
+  cursor: pointer;
 }

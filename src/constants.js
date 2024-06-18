@@ -11,3 +11,9 @@ export const TERMS_AND_CONDITIONS_PAGE_PATH = "/terms-and-conditions";
 // Form Names
 export const CONTACT_FORM = 'CONTACT_FORM';
 export const CAREERS_FORM = 'CAREERS_FORM';
+
+//social media links
+export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61559163870823';
+export const INSTAGRAM_URL = 'https://www.instagram.com/quaprix_tech/';
+export const TWITTER_URL = 'https://twitter.com/Quaprix';
+export const LINKEDIN_URL = 'https://www.linkedin.com/company/quaprix-technologies/';
