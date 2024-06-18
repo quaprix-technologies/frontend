@@ -1,12 +1,25 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AboutUsBanner from "../../components/AboutUsBanner";
 import AboutUsDescription from "../../components/AboutUsDescription";
+import {navigateAndScrollToElement} from "../../utils.js";
+import { CONTACT_US_PAGE_PATH } from "../../constants";
 import "./styles.css";
 
 const AboutUs = () => {
   useEffect(() => {
     document.title = "About";
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    navigateAndScrollToElement({
+      navigate,
+      path: CONTACT_US_PAGE_PATH,
+      elementId: 'contact-us-container'
+    });
+  };
 
   return (
     <div>
@@ -18,8 +31,8 @@ const AboutUs = () => {
             <br />
             With us
           </h1>
-          <button className="get-started-btn">
-            <a href="/contact-us">Get Started now</a>
+          <button className="about-us-section-button" onClick={handleOnClick}>
+            Get Started now
           </button>
         </div>
       </div>

@@ -9,9 +9,11 @@ const ContactButton = () => {
 
   const handleOnClick = () => {
     navigateAndScrollToElement(
-      navigate,
-      CONTACT_US_PAGE_PATH,
-      "contact-us-container"
+        {
+          navigate,
+          path: CONTACT_US_PAGE_PATH,
+          elementId: "contact-us-container"
+        }
     );
   };
 

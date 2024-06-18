@@ -59,7 +59,7 @@ const Form = ({method, fields, onSubmit}) => {
                     </div>
                 ))}
                 <div className="form-group">
-                    <button type="submit" className="btn dark-btn">Submit Now</button>
+                    <button type="submit" className="submit-button dark-btn">Submit Now</button>
                 </div>
             </form>
         </div>

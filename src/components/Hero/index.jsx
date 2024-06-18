@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { CONTACT_US_PAGE_PATH } from "../../constants";
 import video from "../../assets/hero-images/hero-section.mp4";
 import "./styles.css";
 
@@ -7,7 +8,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate("/contact-us");
+    navigate(CONTACT_US_PAGE_PATH);
   };
 
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
           sizes.
         </p>
       </div>
-      <button className="bottom-btn" onClick={handleOnClick}>
+      <button className="hero-section-button" onClick={handleOnClick}>
         Get Started
       </button>
     </div>
