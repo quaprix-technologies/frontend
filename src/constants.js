@@ -7,12 +7,11 @@ export const CAREERS_PAGE_PATH = "/careers";
 export const PRIVACY_POLICY_PAGE_PATH = "/privacy-policy";
 export const TERMS_AND_CONDITIONS_PAGE_PATH = "/terms-and-conditions";
 
-
-// Form Names
+// Form names
 export const CONTACT_FORM = 'CONTACT_FORM';
 export const CAREERS_FORM = 'CAREERS_FORM';
 
-//social media links
+// Social media links
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61559163870823';
 export const INSTAGRAM_URL = 'https://www.instagram.com/quaprix_tech/';
 export const TWITTER_URL = 'https://twitter.com/Quaprix';
