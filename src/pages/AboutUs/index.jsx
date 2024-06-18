@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AboutUsBanner from "../../components/AboutUsBanner";
 import AboutUsDescription from "../../components/AboutUsDescription";
+import {navigateAndScrollToElement} from "../../utils.js";
 import { CONTACT_US_PAGE_PATH } from "../../constants";
 import "./styles.css";
 
@@ -13,7 +14,11 @@ const AboutUs = () => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate(CONTACT_US_PAGE_PATH);
+    navigateAndScrollToElement({
+      navigate,
+      path: CONTACT_US_PAGE_PATH,
+      elementId: 'contact-us-container'
+    });
   };
 
   return (

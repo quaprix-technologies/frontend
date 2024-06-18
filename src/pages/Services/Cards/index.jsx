@@ -41,7 +41,7 @@ const ServicesCards = () => {
 
   useEffect(() => {
     if(hasInteracted) {
-      scrollToElement(activeSectionId === null ? Object.keys(sections)[0] : activeSectionId, 50);
+      scrollToElement(activeSectionId === null ? Object.keys(sections)[0] : activeSectionId);
     }
   }, [activeSectionId])
 

@@ -14,13 +14,13 @@ export const constructFormData = ({ to, subject, text, ...rest }) => {
   return formData;
 };
 
-export const scrollToElement = (id, buffer = 0) => {
+export const scrollToElement = (id) => {
   const element = document.getElementById(id);
   if (element) {
     const elementRect = element.getBoundingClientRect();
-    const absoluteElementTop = elementRect.top + window.scrollY;
+    const absoluteElementTop = elementRect.top + window.scrollY + 50;
     const middle =
-      absoluteElementTop + buffer - (window.innerHeight / 100) * 14;
+      absoluteElementTop - (window.innerHeight / 100) * 14;
     window.scrollTo({ top: middle, behavior: "smooth" });
   }
 };
@@ -28,7 +28,7 @@ export const scrollToElement = (id, buffer = 0) => {
 export const isCurrentPage = (currentPagePath) =>
   window.location.pathname === currentPagePath;
 
-export const navigateAndScrollToElement = (navigate, path, elementId) => {
+export const navigateAndScrollToElement = ({navigate, path, elementId}) => {
   if (isCurrentPage(path)) {
     scrollToElement(elementId);
   } else {
