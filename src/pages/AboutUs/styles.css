@@ -1,27 +1,33 @@
 .background-container {
-  position: relative;
   height: 100vh;
   width: 100%;
   background-image: url("../../assets/hero-images/about-background.png");
   background-size: cover;
-  background-position: center;
+  background-position: left;
+  display: flex;
+  justify-content: right;
+  padding: 10%;
+}
+
+.title-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  max-width: 50%;
 }
 
 .text-container {
-  position: absolute;
-  top: 30%;
-  left: 55%;
+  max-width: 90%;
   color: white;
-  padding: 20px;
   font-size: 2vw;
   text-align: right;
-  max-width: 40%;
 }
 
 .about-us-section-button {
   background: none;
   color: #fff;
-  padding: 15px 30px;
+  padding: 16px 32px;
   border-radius: 30px;
   font-size: 16px;
   font-weight: 500;
@@ -30,45 +36,24 @@
   margin-top: 10vh;
 }
 
-@media screen and (max-width: 1024px) {
-  .background-container {
-    height: 80vh;
-  }
-  .background-container2 h1 {
-    padding: 30% 12% 2% 10%;
-    font-size: 1.5rem;
+@media screen and (max-width: 740px) {
+  .text-container {
+    color: #11016e;
   }
 }
 
-@media screen and (max-width: 780px) {
-  .background-container {
-    height: 100vh;
-  }
-  .text-container {
-    font-size: 3vw;
-    top: 25%;
-  }
+@media screen and (max-width: 460px) {
   .about-us-section-button {
-    font-size: 0.875rem;
-    padding: 10px 20px;
-  }
-  .background-container2 h1 {
-    padding: 8% 0 5% 15%;
-    font-size: 2rem;
+    font-size: 12px;
+    padding: 12px 24px;
+    font-weight: bold;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .background-container {
-    height: 80vh;
-  }
-  .text-container {
-    font-size: 2.6vw;
-    right: 4%;
-    top: 25%;
-  }
+@media screen and (max-width: 390px) {
   .about-us-section-button {
-    font-size: 0.75rem;
+    font-size: 8px;
     padding: 8px 16px;
+    font-weight: bold;
   }
 }

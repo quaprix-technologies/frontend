@@ -1,29 +1,20 @@
 .about-banner {
-  position: relative;
-  height: 50vh;
   margin-top: 5%;
+  padding: 5%;
   background-image: url("../../assets/banners/about-section.png");
   background-size: cover;
-  background-position: center;
+  background-position: right;
 }
 
 .about-banner h1 {
-  padding: 4% 0 4% 5%;
+  margin-bottom: 50px;
   box-shadow: #000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 540px) {
   .about-banner h1 {
-    padding: 10% 12% 2% 10%;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .about-banner h1 {
-    padding: 8% 0 5% 15%;
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }

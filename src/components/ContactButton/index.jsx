@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { navigateAndScrollToElement } from "../../utils.js";
-import { CONTACT_US_PAGE_PATH } from "../../constants.js";
+import {CONTACT_US_CONTAINER_ID, CONTACT_US_PAGE_PATH} from "../../constants.js";
 import "./styles.css";
 
 const ContactButton = () => {
@@ -12,17 +12,15 @@ const ContactButton = () => {
         {
           navigate,
           path: CONTACT_US_PAGE_PATH,
-          elementId: "contact-us-container"
+          elementId: CONTACT_US_CONTAINER_ID
         }
     );
   };
 
   return (
-    <div>
-      <button className="contact-btn" onClick={handleOnClick}>
+      <button className="contact-button" onClick={handleOnClick}>
         Contact
       </button>
-    </div>
   );
 };
 

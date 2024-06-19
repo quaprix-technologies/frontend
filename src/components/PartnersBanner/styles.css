@@ -1,20 +1,19 @@
-.partnersdetails {
-  background: url("../../assets/banners/partner-section-background.png") no-repeat
-    center center;
+.partners-banner {
+  background-image: url("../../assets/banners/partner-section-background.png");
   background-size: cover;
+  background-position: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 320px;
-  width: 100%;
+  padding: 5%;
 }
 
-.partnersdetails h2 {
-  font-size: 60px;
-  color: #000;
-  font-weight: 600;
-  margin-bottom: 20px;
+.partners-banner h1 {
+  margin-bottom: 50px;
+  box-shadow: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 3rem;
 }
 
 .partner-icon {
@@ -29,15 +28,14 @@
   transform: scale(1.2);
 }
 
-.partner-icon-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
 @media (min-width: 900px) {
   .partner-icon:hover {
     transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .partners-banner h1 {
+    font-size: 2rem;
   }
 }
