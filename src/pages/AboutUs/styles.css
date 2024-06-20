@@ -36,24 +36,22 @@
   margin-top: 10vh;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 1024px) {
+  .background-container {
+    justify-content: center;
+    background-position: 15%;
+  }
+  .title-button-container {
+    align-items: center;
+    max-width: 100%;
+  }
   .text-container {
-    color: #11016e;
+    font-size: 3vw;
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
   }
-}
-
-@media screen and (max-width: 460px) {
   .about-us-section-button {
-    font-size: 12px;
-    padding: 12px 24px;
-    font-weight: bold;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .about-us-section-button {
-    font-size: 8px;
-    padding: 8px 16px;
-    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.5);
   }
 }
