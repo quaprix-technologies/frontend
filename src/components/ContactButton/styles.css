@@ -1,9 +1,8 @@
-.contact-btn {
+.contact-button {
   background: none;
   color: #000;
   padding: 12px 60px;
   border-radius: 30px;
-  margin-left: 5%;
   font-size: 1.25rem;
   font-weight: 600;
   border: 3px solid black;
@@ -11,6 +10,6 @@
   text-decoration: none;
 }
 
-.contact-btn:hover {
+.contact-button:hover {
   background: #e4e4e4;
 }

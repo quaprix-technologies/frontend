@@ -1,3 +1,5 @@
+import {sections} from "./pages/Services/services-data.js";
+
 // Page paths
 export const HOME_PAGE_PATH = "/";
 export const SERVICES_PAGE_PATH = "/services";
@@ -16,3 +18,10 @@ export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61559163870
 export const INSTAGRAM_URL = 'https://www.instagram.com/quaprix_tech/';
 export const TWITTER_URL = 'https://twitter.com/Quaprix';
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/quaprix-technologies/';
+
+// Partners info links
+export const QUALITY_DYNAMICS_URL = 'https://www.qualitydynamics.net/';
+
+// Element Id's
+export const CONTACT_US_CONTAINER_ID = "contact-us-container";
+export const FIRST_SERVICES_SECTION_ID = Object.keys(sections)[0];

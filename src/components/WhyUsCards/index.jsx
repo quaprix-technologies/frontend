@@ -4,8 +4,7 @@ import Card from "../Card";
 import ContactButton from "../ContactButton";
 import {navigateAndScrollToElement} from "../../utils.js";
 import WHY_US_CARDS_DATA from "./whyUsCardsData.js";
-import {sections} from "../../pages/Services/services-data.js";
-import { SERVICES_PAGE_PATH } from "../../constants.js";
+import {FIRST_SERVICES_SECTION_ID, SERVICES_PAGE_PATH} from "../../constants.js";
 import "./styles.css";
 
 const WhyUsCards = () => {
@@ -15,7 +14,7 @@ const WhyUsCards = () => {
       navigateAndScrollToElement({
           navigate,
           path: SERVICES_PAGE_PATH,
-          elementId: Object.keys(sections)[0]
+          elementId: FIRST_SERVICES_SECTION_ID
       })
   }
 
@@ -35,9 +34,7 @@ const WhyUsCards = () => {
           </div>
         );
       })}
-      <div className="why-us-card-button">
-        <ContactButton />
-      </div>
+      <ContactButton />
     </div>
   );
 };

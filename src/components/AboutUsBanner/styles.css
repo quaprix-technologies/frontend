@@ -1,29 +1,29 @@
-.about-banner {
-  position: relative;
-  height: 50vh;
+.about-us-banner {
   margin-top: 5%;
+  padding: 5%;
   background-image: url("../../assets/banners/about-section.png");
   background-size: cover;
-  background-position: center;
+  background-position: right;
 }
 
-.about-banner h1 {
-  padding: 4% 0 4% 5%;
+.about-us-banner h1 {
+  margin-bottom: 50px;
   box-shadow: #000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  font-size: 3rem;
+  text-shadow: 1px 1px 0 white;
+  font-size: 2rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .about-banner h1 {
-    padding: 10% 12% 2% 10%;
+@media screen and (max-width: 540px) {
+  .about-us-banner h1 {
     font-size: 1.5rem;
+    text-shadow: 1px 1px 0 white;
+    max-width: 50%;
   }
-}
 
-@media screen and (max-width: 780px) {
-  .about-banner h1 {
-    padding: 8% 0 5% 15%;
-    font-size: 2rem;
+  .about-us-banner .contact-button {
+    padding: 8px 45px;
+    font-size: 1rem;
+    text-shadow: 0.3px 0.3px 0 white;
+    box-shadow: inset 1px 1px 5px white;
   }
 }

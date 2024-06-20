@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AboutUsBanner from "../../components/AboutUsBanner";
 import AboutUsDescription from "../../components/AboutUsDescription";
 import {navigateAndScrollToElement} from "../../utils.js";
-import { CONTACT_US_PAGE_PATH } from "../../constants";
+import {CONTACT_US_CONTAINER_ID, CONTACT_US_PAGE_PATH} from "../../constants";
 import "./styles.css";
 
 const AboutUs = () => {
@@ -17,20 +17,17 @@ const AboutUs = () => {
     navigateAndScrollToElement({
       navigate,
       path: CONTACT_US_PAGE_PATH,
-      elementId: 'contact-us-container'
+      elementId: CONTACT_US_CONTAINER_ID
     });
   };
 
   return (
     <div>
       <div className="background-container">
-        <div className="text-container">
-          <h1>
-            Open Your World <br />
-            Of Opportunities
-            <br />
-            With us
-          </h1>
+        <div className="title-button-container">
+          <div className="text-container">
+            <h1>Open Your World Of Opportunities With us</h1>
+          </div>
           <button className="about-us-section-button" onClick={handleOnClick}>
             Get Started now
           </button>

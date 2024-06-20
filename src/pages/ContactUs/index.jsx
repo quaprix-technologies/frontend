@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ContactUsSection from "../../components/ContactUsSection";
 import ContactForm from "../../components/ContactForm";
+import {CONTACT_US_CONTAINER_ID} from "../../constants.js";
 import msgIcon from "../../assets/icons/msg-icon.png";
 import "./styles.css";
 
@@ -18,7 +19,7 @@ const ContactUs = () => {
           <p>We&apos;d love to hear from you</p>
         </div>
       </div>
-      <div className="contact" id="contact-us-container">
+      <div className="contact" id={CONTACT_US_CONTAINER_ID}>
         <div className="contact-col">
           <h3>
             Send us a message <img src={msgIcon} alt="Message Icon" />
