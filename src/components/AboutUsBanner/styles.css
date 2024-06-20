@@ -1,4 +1,4 @@
-.about-banner {
+.about-us-banner {
   margin-top: 5%;
   padding: 5%;
   background-image: url("../../assets/banners/about-section.png");
@@ -6,15 +6,24 @@
   background-position: right;
 }
 
-.about-banner h1 {
+.about-us-banner h1 {
   margin-bottom: 50px;
   box-shadow: #000;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 0 white;
   font-size: 2rem;
 }
 
 @media screen and (max-width: 540px) {
-  .about-banner h1 {
+  .about-us-banner h1 {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 0 white;
+    max-width: 50%;
+  }
+
+  .about-us-banner .contact-button {
+    padding: 8px 45px;
     font-size: 1rem;
+    text-shadow: 0.3px 0.3px 0 white;
+    box-shadow: inset 1px 1px 5px white;
   }
 }
