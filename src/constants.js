@@ -1,5 +1,3 @@
-import {sections} from "./pages/Services/services-data.js";
-
 // Page paths
 export const HOME_PAGE_PATH = "/";
 export const SERVICES_PAGE_PATH = "/services";
@@ -24,4 +22,4 @@ export const QUALITY_DYNAMICS_URL = 'https://www.qualitydynamics.net/';
 
 // Element Id's
 export const CONTACT_US_CONTAINER_ID = "contact-us-container";
-export const FIRST_SERVICES_SECTION_ID = Object.keys(sections)[0];
+export const SERVICES_CARDS_CONTAINER_ID = "services-cards-container";

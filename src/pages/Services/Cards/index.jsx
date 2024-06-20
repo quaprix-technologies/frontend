@@ -1,19 +1,23 @@
 import React, {useEffect, useState} from "react";
+import {Accordion, AccordionDetails} from '@mui/material';
+import {ContentRow, ExpandIcon, SectionHeaderTitle, ServicesSectionHeader} from "./style.js";
 import Card from "../../../components/Card";
-import {scrollToElement} from "../../../utils.js";
+import {scrollToElementWithTimeout} from "../../../utils.js";
 import {sections} from "../services-data.js";
-import "./styles.css";
+import {SERVICES_CARDS_CONTAINER_ID} from "../../../constants.js";
 
-const ServicesSection = ({ id, icon, title, rows, isOpen, onClick }) => (
-  <div className="section" id={id}>
-    <div onClick={onClick} className="section-header">
-      <h2 className="section-title">{title}</h2>
-      {icon && <img src={icon} alt="section icon" className="section-icon" />}
-    </div>
-    {isOpen && (
-      <div className="section-content">
+const ServicesSection = ({ id, title, rows, expanded, onClick }) => (
+    <Accordion expanded={expanded} disableGutters={true} onChange={onClick}>
+      <ServicesSectionHeader
+          expandIcon={<ExpandIcon/>}
+          aria-controls={`${id}-content`}
+          id={id}
+      >
+          <SectionHeaderTitle variant="subtitle1">{title}</SectionHeaderTitle>
+      </ServicesSectionHeader>
+      <AccordionDetails>
         {rows.map((row, index) => (
-          <div className="row" key={index}>
+          <ContentRow key={index}>
             {row.map((card, cardIndex) => (
               <Card
                 key={cardIndex}
@@ -22,40 +26,37 @@ const ServicesSection = ({ id, icon, title, rows, isOpen, onClick }) => (
                 content={card.content}
               />
             ))}
-          </div>
+          </ContentRow>
         ))}
-      </div>
-    )}
-  </div>
+      </AccordionDetails>
+    </Accordion>
 );
 
 const ServicesCards = () => {
-
   const [activeSectionId, setActiveSectionId] = useState(Object.keys(sections)[0]);
   const [hasInteracted, setHasInteracted] = useState(false);
 
-  const handleSectionClick = (id) => {
-    setActiveSectionId(activeSectionId === id ? null : id)
+  const handleSectionClick = (id) => (event, isExpanded) => {
+    setActiveSectionId(isExpanded ? id : null);
     setHasInteracted(true);
   }
 
   useEffect(() => {
     if(hasInteracted) {
-      scrollToElement(activeSectionId === null ? Object.keys(sections)[0] : activeSectionId);
+        return scrollToElementWithTimeout(activeSectionId === null ? SERVICES_CARDS_CONTAINER_ID : activeSectionId, 400);
     }
-  }, [activeSectionId])
+  }, [activeSectionId]);
 
   return (
-    <div className="services-cards" id="services-cards">
+    <div id={SERVICES_CARDS_CONTAINER_ID}>
       {Object.entries(sections).map(([id, section]) => (
         <ServicesSection
           key={id}
           id={id}
-          icon={section.icon}
           title={section.title}
           rows={section.rows}
-          isOpen={activeSectionId === id}
-          onClick={() => handleSectionClick(id)}
+          expanded={activeSectionId === id}
+          onClick={handleSectionClick(id)}
         />
       ))}
     </div>

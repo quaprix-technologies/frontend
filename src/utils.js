@@ -25,17 +25,24 @@ export const scrollToElement = (id) => {
   }
 };
 
+export const scrollToElementWithTimeout = (elementId, milliseconds) => {
+  console.log('scrollToElementWithTimeout')
+  const timeoutId = setTimeout(() => {
+    scrollToElement(elementId);
+  }, milliseconds || 1);
+
+  return () => clearTimeout(timeoutId);
+}
+
 export const isCurrentPage = (currentPagePath) =>
   window.location.pathname === currentPagePath;
 
-export const navigateAndScrollToElement = ({navigate, path, elementId}) => {
+export const navigateAndScrollToElement = ({navigate, path, elementId, milliseconds}) => {
   if (isCurrentPage(path)) {
     scrollToElement(elementId);
   } else {
     navigate(path);
-    setTimeout(() => {
-      scrollToElement(elementId);
-    }, 1);
+    scrollToElementWithTimeout(elementId, milliseconds);
   }
 };
 

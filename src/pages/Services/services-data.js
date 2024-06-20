@@ -1,4 +1,3 @@
-import dropDownIcon from "../../assets/icons/drop-down.png";
 import frontEndDevelopmentIcon from "../../assets/icons/services/frontend-development.png";
 import backendDevelopmentIcon from "../../assets/icons/services/backend-development.png";
 import nativeMobileAppDevelopmentIcon from "../../assets/icons/services/native-mobile-app-development.png";
@@ -17,7 +16,6 @@ import responsiveWebDesignIcon from "../../assets/icons/services/responsive-web-
 
 export const sections = {
     software_development: {
-        icon: dropDownIcon,
         title: "Software Development",
         rows: [
             [
@@ -64,7 +62,6 @@ export const sections = {
     },
     software_testing: {
         title: "Software Testing",
-        icon: dropDownIcon,
         rows: [
             [
                 {
@@ -110,7 +107,6 @@ export const sections = {
     },
     ui_ux_design: {
         title: "UI/UX Design",
-        icon: dropDownIcon,
         rows: [
             [
                 {
