@@ -26,7 +26,6 @@ export const scrollToElement = (id) => {
 };
 
 export const scrollToElementWithTimeout = (elementId, milliseconds) => {
-  console.log('scrollToElementWithTimeout')
   const timeoutId = setTimeout(() => {
     scrollToElement(elementId);
   }, milliseconds || 1);

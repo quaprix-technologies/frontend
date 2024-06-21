@@ -1,11 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { AdvancedVideo } from '@cloudinary/react';
+import useCloudinary from "../../hooks/useCloudinary.js";
 import { CONTACT_US_PAGE_PATH } from "../../constants";
-import video from "../../assets/hero-images/hero-section.mp4";
 import "./styles.css";
 
 const Hero = () => {
-  const navigate = useNavigate();
+    const cld = useCloudinary();
+    const myVideo = cld.video('homepage_hero');
+    const navigate = useNavigate();
 
   const handleOnClick = () => {
     navigate(CONTACT_US_PAGE_PATH);
@@ -13,9 +16,7 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      <video src={video} autoPlay loop muted>
-        <source src={video} type="video/mp4" />
-      </video>
+      <AdvancedVideo cldVid={myVideo} autoPlay loop muted/>
       <div className="text-wrap">
         <h1>
           STREAMLINE YOUR
