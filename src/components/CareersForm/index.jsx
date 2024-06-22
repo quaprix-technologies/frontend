@@ -1,7 +1,8 @@
 import React, {useRef, useState} from "react";
 import axios from "axios";
 import Form from "../Form";
-import {constructFormData, getBaseUrl, getFormReceiverEmail} from "../../utils.js";
+import getConfig from "../../config.js";
+import {constructFormData, getFormReceiverEmail} from "../../utils.js";
 import {CAREERS_FORM} from "../../constants.js";
 import "./styles.css";
 
@@ -12,7 +13,6 @@ const CareerForm = () => {
   const [option, setOption] = useState("");
   const [file, setFile] = useState(null);
   const fileInputRef = useRef(null);
-  const baseUrl = getBaseUrl();
 
   const fields = [
     {
@@ -100,7 +100,7 @@ const CareerForm = () => {
     });
 
     try {
-      const careersFormUrl = `${baseUrl}/api/careers-form`;
+      const careersFormUrl = `${getConfig().baseUrl}/api/careers-form`;
       await axios.post(careersFormUrl, formData, {
         headers: {
           "Content-Type": "multipart/form-data",

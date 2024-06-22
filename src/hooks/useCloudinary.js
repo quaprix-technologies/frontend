@@ -1,11 +1,12 @@
 import { useMemo } from 'react';
 import { Cloudinary } from '@cloudinary/url-gen';
+import getConfig from "../config.js";
 
 const useCloudinary = () => {
     return useMemo(() => {
         return new Cloudinary({
             cloud: {
-                cloudName: process.env.VITE_APP_CLOUDINARY_CLOUD_NAME,
+                cloudName: getConfig().cloudinaryCloudName,
             },
         });
     }, []);
