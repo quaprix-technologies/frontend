@@ -15,14 +15,14 @@ const Footer = () => {
           <div className="footer-logo">
             <img src={logo} className="logo-img" alt="Quaprix Index Logo" />
             <h3>Require assistance?</h3>
-            <ContactButton/>
+            <ContactButton />
           </div>
         </div>
         <QuickLinksSection />
         <FollowUsSection />
         <ContactUsSection />
       </footer>
-      <Copyright/>
+      <Copyright />
     </div>
   );
 };

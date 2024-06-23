@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./styles.css";
 
 const PrivacyPolicy = () => {
-
   useEffect(() => {
     document.title = "Privacy Policy";
   }, []);

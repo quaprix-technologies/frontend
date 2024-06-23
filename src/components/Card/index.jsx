@@ -19,7 +19,7 @@ const Card = ({ icon, title, content, linkLabel, onLinkClick }) => {
         <div className="card-link-label" onClick={onLinkClick}>
           {linkLabel}
         </div>
-      ): null}
+      ) : null}
     </div>
   );
 };

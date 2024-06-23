@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import ContactUsSection from "../../components/ContactUsSection";
 import ContactForm from "../../components/ContactForm";
-import {CONTACT_US_CONTAINER_ID} from "../../constants.js";
+import { CONTACT_US_CONTAINER_ID } from "../../constants.js";
 import msgIcon from "../../assets/icons/msg-icon.png";
 import "./styles.css";
 
 const ContactUs = () => {
-
   useEffect(() => {
     document.title = "Contact";
   }, []);
@@ -30,10 +29,10 @@ const ContactUs = () => {
             important to us as we strive to provide exceptional service to our
             university community.
           </p>
-          <ContactUsSection/>
+          <ContactUsSection />
         </div>
         <div className="contact-col">
-          <ContactForm/>
+          <ContactForm />
         </div>
       </div>
     </div>
