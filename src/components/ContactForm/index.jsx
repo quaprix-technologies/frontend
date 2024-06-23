@@ -1,9 +1,9 @@
 import axios from "axios";
-import {useState} from "react";
+import { useState } from "react";
 import Form from "../Form";
 import getConfig from "../../config.js";
-import {constructFormData, getFormReceiverEmail} from "../../utils.js";
-import {CONTACT_FORM} from "../../constants.js";
+import { constructFormData, getFormReceiverEmail } from "../../utils.js";
+import { CONTACT_FORM } from "../../constants.js";
 import "./styles.css";
 
 const ContactForm = () => {
@@ -14,38 +14,38 @@ const ContactForm = () => {
 
   const fields = [
     {
-      type: 'text',
-      id: 'name',
-      label: 'Your Name',
-      placeholder: 'Enter your name',
+      type: "text",
+      id: "name",
+      label: "Your Name",
+      placeholder: "Enter your name",
       value: name,
       onChange: (e) => setName(e.target.value),
       required: true,
     },
     {
-      type: 'tel',
-      id: 'phone',
-      label: 'Phone',
-      placeholder: 'Enter your phone number',
-      pattern:"[0-9]*",
+      type: "tel",
+      id: "phone",
+      label: "Phone",
+      placeholder: "Enter your phone number",
+      pattern: "[0-9]*",
       value: number,
       onChange: (e) => setNumber(e.target.value),
       required: true,
     },
     {
-      type: 'email',
-      id: 'email',
-      label: 'Your Email',
-      placeholder: 'Enter your email',
+      type: "email",
+      id: "email",
+      label: "Your Email",
+      placeholder: "Enter your email",
       value: email,
       onChange: (e) => setEmail(e.target.value),
       required: true,
     },
     {
-      type: 'textarea',
-      id: 'message',
-      label: 'Write Your Message Here',
-      placeholder: 'Enter your message',
+      type: "textarea",
+      id: "message",
+      label: "Write Your Message Here",
+      placeholder: "Enter your message",
       cols: 30,
       rows: 6,
       value: message,
@@ -72,12 +72,12 @@ const ContactForm = () => {
     const formData = constructFormData({
       to: getFormReceiverEmail(CONTACT_FORM),
       subject: "Query for IT Services",
-      text
+      text,
     });
 
     try {
       const contactFormUrl = `${getConfig().baseUrl}/api/contact-form`;
-      await axios.post(contactFormUrl, formData)
+      await axios.post(contactFormUrl, formData);
       resetForm();
       alert("Form submitted successfully!");
     } catch (error) {

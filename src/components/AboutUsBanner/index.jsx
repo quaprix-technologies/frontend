@@ -1,6 +1,6 @@
 import React from "react";
 import ContactButton from "../ContactButton";
-import "./styles.css"
+import "./styles.css";
 
 const AboutUsBanner = () => {
   return (

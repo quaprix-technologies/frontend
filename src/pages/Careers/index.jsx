@@ -23,7 +23,7 @@ const Careers = () => {
         </h3>
         <Jobs />
         <h1>Join Our Team</h1>
-        <CareerForm/>
+        <CareerForm />
       </div>
     </div>
   );

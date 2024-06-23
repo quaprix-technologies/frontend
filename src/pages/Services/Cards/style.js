@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {AccordionSummary, Typography} from "@mui/material";
+import { AccordionSummary, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const ServicesSectionHeader = styled(AccordionSummary)`
@@ -27,13 +27,13 @@ export const ExpandIcon = styled(ExpandMoreIcon)`
 `;
 
 export const ContentRow = styled.div`
-    && {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+  && {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-      @media (max-width: 1100px) {
-        flex-direction: column;
-      }
+    @media (max-width: 1100px) {
+      flex-direction: column;
     }
+  }
 `;

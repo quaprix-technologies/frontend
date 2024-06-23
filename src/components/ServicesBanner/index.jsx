@@ -2,7 +2,6 @@ import React from "react";
 import ContactButton from "../ContactButton";
 import "./styles.css";
 
-
 const ServicesBanner = () => {
   return (
     <div className="service-banner">

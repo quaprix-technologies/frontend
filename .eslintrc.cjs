@@ -1,26 +1,45 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    node: true,
+    es2020: true,
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+    'prettier',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
-  rules: {
-    'react/jsx-no-target-blank': 'off',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
-    'react/prop-types': 'off',
-    'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  plugins: [
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+    'prettier',
+  ],
+  rules: {
+    'react/jsx-no-target-blank': 'warn',
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': ['warn', { varsIgnorePattern: '^React$' }],
+    'prettier/prettier': 'warn',
+    'jsx-a11y/anchor-is-valid': 'warn',
+  },
+  ignorePatterns: ['node_modules/', 'build/', 'dist/'],
   globals: {
     process: 'readonly',
   },
-}
+};

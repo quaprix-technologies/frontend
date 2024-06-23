@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { AdvancedVideo } from '@cloudinary/react';
+import { AdvancedVideo } from "@cloudinary/react";
 import useCloudinary from "../../hooks/useCloudinary.js";
 import assets from "../../assets.js";
 import { CONTACT_US_PAGE_PATH } from "../../constants";

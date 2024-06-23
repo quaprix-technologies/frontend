@@ -10,11 +10,13 @@ import Term_Condition from "./pages/TermsAndConditions";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import {
-  ABOUT_US_PAGE_PATH, CAREERS_PAGE_PATH,
+  ABOUT_US_PAGE_PATH,
+  CAREERS_PAGE_PATH,
   CONTACT_US_PAGE_PATH,
   HOME_PAGE_PATH,
-  PRIVACY_POLICY_PAGE_PATH, SERVICES_PAGE_PATH,
-  TERMS_AND_CONDITIONS_PAGE_PATH
+  PRIVACY_POLICY_PAGE_PATH,
+  SERVICES_PAGE_PATH,
+  TERMS_AND_CONDITIONS_PAGE_PATH,
 } from "./constants.js";
 
 const App = () => {
