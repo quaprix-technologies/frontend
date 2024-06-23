@@ -1,3 +1,7 @@
+import {
+  SERVICES_PAGE_PATH,
+  SERVICES_CARDS_CONTAINER_ID,
+} from "../../constants";
 import group_icon from "../../assets/icons/group.png";
 import mortarboard_icon from "../../assets/icons/mortarboard.png";
 import tech_icon from "../../assets/icons/coding.png";
@@ -20,7 +24,11 @@ const WHY_US_CARDS_DATA = [
     title: "Technologies",
     content:
       "We offer a comprehensive range of IT services. Our services are designed to help small businesses thrive in today's digital world.",
-    linkLabel: "Learn More",
+    link: {
+      label: "Learn More",
+      url: SERVICES_PAGE_PATH,
+      elementId: SERVICES_CARDS_CONTAINER_ID,
+    },
   },
 ];
 
