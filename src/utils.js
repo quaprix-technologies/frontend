@@ -53,3 +53,8 @@ export const getFormReceiverEmail = (formName) => {
       return config.careersFormEmailReceiver;
   }
 }
+
+export const navigateAndScrollToTop = (navigate, path) => {
+  navigate(path);
+  window.scrollTo(0, 0);
+}
