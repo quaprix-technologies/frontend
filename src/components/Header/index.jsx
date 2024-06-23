@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import OutsideClickHandler from "../OutsideClickHandler";
 import NavbarItem from "./NavbarItem";
+import { navigateAndScrollToTop } from "../../utils.js";
 import {HOME_PAGE_PATH, SERVICES_PAGE_PATH, ABOUT_US_PAGE_PATH, CONTACT_US_PAGE_PATH, CAREERS_PAGE_PATH} from "../../constants.js";
 import quaprix from "../../assets/icons/quaprix.png";
 import menu_icon from "../../assets/icons/menu-icon.png";
@@ -16,8 +17,8 @@ const Header = () => {
   };
 
   const handleOnClick = (path) => {
+    navigateAndScrollToTop(navigate, path);
     toggleMenu();
-    navigate(path);
   };
 
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import { navigateAndScrollToTop } from "../../utils.js";
 import {
   ABOUT_US_PAGE_PATH,
   CAREERS_PAGE_PATH,
@@ -11,6 +12,10 @@ import "./styles.css";
 
 const QuickLinksSection = () => {
   const navigate = useNavigate();
+
+  const handleOnClick = (path) => () => {
+    navigateAndScrollToTop(navigate, path);
+  }
 
   const quickLinks = [
     {label: 'Home', path: HOME_PAGE_PATH},
@@ -28,7 +33,7 @@ const QuickLinksSection = () => {
       <ul>
         {quickLinks.map((quickLink) => {
           return <li key={quickLink.path}>
-              <div onClick={() => navigate(quickLink.path)}>{quickLink.label}</div>
+              <div onClick={handleOnClick(quickLink.path)}>{quickLink.label}</div>
           </li>
         })}
       </ul>
