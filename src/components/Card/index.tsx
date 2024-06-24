@@ -1,7 +1,19 @@
 import React from "react";
 import "./style.css";
 
-const Card = ({ icon, title, content, link, onLinkClick }) => {
+type Props = {
+  icon: string;
+  title: string;
+  content: string;
+  link: {
+    label: string;
+    url: string;
+    elementId: string;
+  };
+  onLinkClick: (url: string, elementId: string) => void;
+}
+
+const Card: React.FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
   const handleLinkClick = () => {
     onLinkClick(link.url, link.elementId);
   };

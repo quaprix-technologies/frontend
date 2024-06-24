@@ -1,4 +1,3 @@
-import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Services from "./pages/Services";
@@ -19,8 +18,12 @@ import {
   TERMS_AND_CONDITIONS_PAGE_PATH,
 } from "./constants.js";
 
-const App = () => {
-  const FullPage = ({ children }) => (
+type FullPageProps = {
+  children: JSX.Element;
+}
+
+const App: React.FC = () => {
+  const FullPage: React.FC<FullPageProps> = ({ children }) => (
     <>
       <Header />
       {children}
