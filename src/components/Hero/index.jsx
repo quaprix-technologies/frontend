@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <div className="hero">
-      <AdvancedVideo cldVid={myVideo} autoPlay loop muted />
+      <AdvancedVideo cldVid={myVideo} autoPlay loop muted playsInline />
       <div className="text-wrap">
         <h1>
           STREAMLINE YOUR
