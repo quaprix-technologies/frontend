@@ -18,7 +18,7 @@ const WhyUsCards = () => {
   };
 
   return (
-    <div className="why-us-card-container">
+    <div className="why-us-cards">
       {WHY_US_CARDS_DATA.map((cardData, index) => {
         const { icon, title, content, link } = cardData;
         return (
@@ -33,7 +33,7 @@ const WhyUsCards = () => {
           </div>
         );
       })}
-      <ContactButton />
+      {/* <ContactButton /> */}
     </div>
   );
 };

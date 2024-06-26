@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 type Props = {
-  icon: string;
+  icon?: string;
   title: string;
   content: string;
   link: {
@@ -21,21 +21,19 @@ const Card: React.FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
   return (
     <div className="card">
       <div className="card-header">
-        <div className="card-icon-container">
-          {icon && <img src={icon} alt="icon" className="card-icon" />}
-        </div>
+        {icon && <img src={icon} alt="icon" className="card-icon" />}
         <div className="card-title">
           <h3>{title}</h3>
         </div>
       </div>
       <div className="card-content">
         <p>{content}</p>
+        {link && (
+          <div className="card-link-label" onClick={handleLinkClick}>
+            {link.label}
+          </div>
+        )}
       </div>
-      {link && (
-        <div className="card-link-label" onClick={handleLinkClick}>
-          {link.label}
-        </div>
-      )}
     </div>
   );
 };

@@ -1,14 +1,14 @@
-.why-us-card-container {
+.why-us-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
+  gap: 25px;
+  margin: 5%;
+  height: 100%;
 }
 
-.why-us-card-container .contact-button {
-  margin-bottom: 5%;
+.why-us-cards .contact-button {
+  margin: 40px 0;
 }
 
 .why-us-card {
@@ -18,7 +18,7 @@
 }
 
 .why-us-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1200px) {

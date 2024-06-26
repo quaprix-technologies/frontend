@@ -29,8 +29,10 @@ export const ExpandIcon = styled(ExpandMoreIcon)`
 export const ContentRow = styled.div`
   && {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    margin: 5%;
 
     @media (max-width: 1100px) {
       flex-direction: column;
