@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import environment from "vite-plugin-environment";
@@ -13,4 +16,10 @@ export default defineConfig({
       "VITE_APP_CLOUDINARY_CLOUD_NAME",
     ]),
   ],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    css: true,
+    setupFiles: "./src/test/setup.ts",
+  }
 });
