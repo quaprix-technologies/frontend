@@ -19,14 +19,14 @@
 
 .text-container {
   max-width: 90%;
-  color: white;
+  color: var(--white);
   font-size: 2vw;
   text-align: right;
 }
 
 .about-us-section-button {
   background: none;
-  color: #fff;
+  color: var(--white);
   padding: 16px 32px;
   border-radius: 30px;
   font-size: 16px;
@@ -52,6 +52,6 @@
   }
   .about-us-section-button {
     text-shadow: 1px 1px 5px black;
-    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 10px var(--blackRgbAlt);
   }
 }

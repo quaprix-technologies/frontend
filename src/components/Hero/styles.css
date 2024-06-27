@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white);
 }
 
 .hero video {
@@ -49,8 +49,8 @@
   padding: 1rem 4rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: black;
-  background-color: white;
+  color: var(--black);
+  background-color: var(--white);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -58,8 +58,8 @@
 }
 
 .hero-section-button:hover {
-  background-color: #000e3d;
-  color: #fff;
+  background-color: var(--darkBlueAlt1);
+  color: var(--white);
 }
 
 @media (max-width: 1200px) {

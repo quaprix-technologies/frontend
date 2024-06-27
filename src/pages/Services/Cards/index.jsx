@@ -6,7 +6,7 @@ import {
   ServiceSectionTitle,
   ServiceSectionHeader,
   ServiceCardWrapper,
-} from "./style.js";
+} from "./style.ts";
 import Card from "../../../components/Card";
 import { scrollToElementWithTimeout } from "../../../utils.js";
 import { serviceSections } from "../services-data.js";

@@ -8,7 +8,7 @@
 
 .about-us-banner h1 {
   margin-bottom: 50px;
-  box-shadow: #000;
+  box-shadow: var(--black);
   text-shadow: 1px 1px 0 white;
   font-size: 2rem;
 }

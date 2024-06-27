@@ -1,5 +1,5 @@
 .copyright-footer {
-  background: #fff;
+  background: var(--white);
 }
 
 .copyright-footer .copyright-msg {

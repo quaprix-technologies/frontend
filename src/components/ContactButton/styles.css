@@ -1,6 +1,6 @@
 .contact-button {
   background: none;
-  color: #000;
+  color: var(--black);
   padding: 12px 60px;
   border-radius: 30px;
   font-size: 1.25rem;
@@ -11,5 +11,5 @@
 }
 
 .contact-button:hover {
-  background: #e4e4e4;
+  background: var(--lightGrey);
 }
