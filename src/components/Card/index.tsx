@@ -23,7 +23,7 @@ const Card: React.FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
       <div className="card-header">
         {icon && <img src={icon} alt="icon" className="card-icon" />}
         <div className="card-title">
-          <h3>{title}</h3>
+          {title}
         </div>
       </div>
       <div className="card-content">

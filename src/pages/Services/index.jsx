@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ServicesBanner from "../../components/ServicesBanner";
-import ServicesCards from "./Cards";
+import ServiceCards from "./Cards";
 import "./styles.css";
 
 const Services = () => {
@@ -20,7 +20,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-      <ServicesCards />
+      <ServiceCards />
       <ServicesBanner />
     </div>
   );
