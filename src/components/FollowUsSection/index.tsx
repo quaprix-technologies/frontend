@@ -11,8 +11,8 @@ import instaIcon from "../../assets/icons/instagram.png";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import "./styles.css";
 
-const FollowUsSection = () => {
-  const handleOnClick = (url) => {
+const FollowUsSection : React.FC = () => {
+  const handleOnClick = (url: string) => {
     window.open(url, "_blank");
   };
 

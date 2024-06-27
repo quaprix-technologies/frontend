@@ -7,7 +7,7 @@ import Copyright from "../Copyright";
 import logo from "../../assets/icons/quaprix-header.png";
 import "./styles.css";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div>
       <footer className="footer container">
