@@ -14,7 +14,7 @@ import userInterfaceUIDesignIcon from "../../assets/icons/services/user-Interfac
 import userExperienceUXDesignIcon from "../../assets/icons/services/user-experience-ux-design.png";
 import responsiveWebDesignIcon from "../../assets/icons/services/responsive-web-design.png";
 
-export const sections = {
+export const serviceSections = {
   software_development: {
     title: "Software Development",
     rows: [
@@ -33,7 +33,7 @@ export const sections = {
         },
         {
           icon: nativeMobileAppDevelopmentIcon,
-          title: "Native Mobile App development ",
+          title: "Native Mobile App Development ",
           content:
             "Crafting intuitive, high-performance native mobile apps tailored to your vision. Our expert team delivers seamless user experiences across iOS and Android platforms, ensuring your app stands out in the digital marketplace.",
         },
@@ -41,7 +41,7 @@ export const sections = {
       [
         {
           icon: productLifeCycleManagementIcon,
-          title: "Product life cycle management",
+          title: "Product Life Cycle Management",
           content:
             "Empower your product development with our full-cycle PLM solutions. Manage ideation to launch efficiently, streamline collaboration, and maximize value. Bring products to market faster and smarter with our expertise.",
         },
@@ -72,7 +72,7 @@ export const sections = {
         },
         {
           icon: webAndMobileBasedTestingIcon,
-          title: "Web and mobile based Testing",
+          title: "Web And Mobile Based Testing",
           content:
             "Ensure flawless user experiences across web and mobile platforms with our comprehensive testing solutions. From functionality to compatibility, our expert team guarantees smooth performance across all devices and browsers.",
         },

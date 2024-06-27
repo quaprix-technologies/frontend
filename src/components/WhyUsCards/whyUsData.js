@@ -1,12 +1,12 @@
 import {
   SERVICES_PAGE_PATH,
-  SERVICES_CARDS_CONTAINER_ID,
+  SERVICE_CARDS_CONTAINER_ID,
 } from "../../constants";
 import group_icon from "../../assets/icons/group.png";
 import mortarboard_icon from "../../assets/icons/mortarboard.png";
 import tech_icon from "../../assets/icons/coding.png";
 
-const WHY_US_CARDS_DATA = [
+const WHY_US_DATA = [
   {
     icon: group_icon,
     title: "Our Story",
@@ -27,9 +27,9 @@ const WHY_US_CARDS_DATA = [
     link: {
       label: "Learn More",
       url: SERVICES_PAGE_PATH,
-      elementId: SERVICES_CARDS_CONTAINER_ID,
+      elementId: SERVICE_CARDS_CONTAINER_ID,
     },
   },
 ];
 
-export default WHY_US_CARDS_DATA;
+export default WHY_US_DATA;

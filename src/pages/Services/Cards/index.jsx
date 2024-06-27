@@ -1,49 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { Accordion, AccordionDetails } from "@mui/material";
 import {
-  ContentRow,
+  ServiceContentRow,
   ExpandIcon,
-  SectionHeaderTitle,
-  ServicesSectionHeader,
+  ServiceSectionTitle,
+  ServiceSectionHeader,
+  ServiceCardWrapper,
 } from "./style.js";
 import Card from "../../../components/Card";
 import { scrollToElementWithTimeout } from "../../../utils.js";
-import { sections } from "../services-data.js";
-import { SERVICES_CARDS_CONTAINER_ID } from "../../../constants.js";
+import { serviceSections } from "../services-data.js";
+import { SERVICE_CARDS_CONTAINER_ID } from "../../../constants.js";
 
-const ServicesSection = ({ id, title, rows, expanded, onClick }) => (
+const ServiceSection = ({ id, title, rows, expanded, onClick }) => (
   <Accordion expanded={expanded} disableGutters={true} onChange={onClick}>
-    <ServicesSectionHeader
+    <ServiceSectionHeader
       expandIcon={<ExpandIcon />}
       aria-controls={`${id}-content`}
       id={id}
     >
-      <SectionHeaderTitle variant="subtitle1">{title}</SectionHeaderTitle>
-    </ServicesSectionHeader>
+      <ServiceSectionTitle variant="subtitle1">{title}</ServiceSectionTitle>
+    </ServiceSectionHeader>
     <AccordionDetails>
       {rows.map((row, index) => (
-        <ContentRow key={index}>
+        <ServiceContentRow key={index}>
           {row.map((card, cardIndex) => (
-            <Card
-              key={cardIndex}
-              icon={card.icon}
-              title={card.title}
-              content={card.content}
-            />
+            <ServiceCardWrapper>
+              <Card
+                key={cardIndex}
+                icon={card.icon}
+                title={card.title}
+                content={card.content}
+              />
+            </ServiceCardWrapper>
           ))}
-        </ContentRow>
+        </ServiceContentRow>
       ))}
     </AccordionDetails>
   </Accordion>
 );
 
-const ServicesCards = () => {
+const ServiceCards = () => {
   const [activeSectionId, setActiveSectionId] = useState(
-    Object.keys(sections)[0],
+    Object.keys(serviceSections)[0],
   );
   const [hasInteracted, setHasInteracted] = useState(false);
 
-  const handleSectionClick = (id) => (event, isExpanded) => {
+  const handleSectionClick = (id) => (_event, isExpanded) => {
     setActiveSectionId(isExpanded ? id : null);
     setHasInteracted(true);
   };
@@ -52,7 +55,7 @@ const ServicesCards = () => {
     if (hasInteracted) {
       return scrollToElementWithTimeout(
         activeSectionId === null
-          ? SERVICES_CARDS_CONTAINER_ID
+          ? SERVICE_CARDS_CONTAINER_ID
           : activeSectionId,
         400,
       );
@@ -60,9 +63,9 @@ const ServicesCards = () => {
   }, [activeSectionId]);
 
   return (
-    <div id={SERVICES_CARDS_CONTAINER_ID}>
-      {Object.entries(sections).map(([id, section]) => (
-        <ServicesSection
+    <div id={SERVICE_CARDS_CONTAINER_ID}>
+      {Object.entries(serviceSections).map(([id, section]) => (
+        <ServiceSection
           key={id}
           id={id}
           title={section.title}
@@ -75,4 +78,4 @@ const ServicesCards = () => {
   );
 };
 
-export default ServicesCards;
+export default ServiceCards;

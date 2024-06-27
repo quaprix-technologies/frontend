@@ -24,4 +24,4 @@ export const QUALITY_DYNAMICS_URL = "https://www.qualitydynamics.net/";
 
 // Element Id's
 export const CONTACT_US_CONTAINER_ID = "contact-us-container";
-export const SERVICES_CARDS_CONTAINER_ID = "services-cards-container";
+export const SERVICE_CARDS_CONTAINER_ID = "service-cards-container";

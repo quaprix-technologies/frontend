@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { AccordionSummary, Typography } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export const ServicesSectionHeader = styled(AccordionSummary)`
+export const ServiceSectionHeader = styled(AccordionSummary)`
   && {
     background-color: #073e91;
     transition: background-color 0.5s ease;
@@ -13,7 +13,7 @@ export const ServicesSectionHeader = styled(AccordionSummary)`
   }
 `;
 
-export const SectionHeaderTitle = styled(Typography)`
+export const ServiceSectionTitle = styled(Typography)`
   && {
     font-weight: 700;
     color: white;
@@ -26,14 +26,24 @@ export const ExpandIcon = styled(ExpandMoreIcon)`
   }
 `;
 
-export const ContentRow = styled.div`
+export const ServiceContentRow = styled.div`
   && {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
 
     @media (max-width: 1100px) {
       flex-direction: column;
+    }
+  }
+`;
+
+export const ServiceCardWrapper = styled.div`
+  && {
+    width: calc(33%);
+    padding: 10px;
+
+    @media screen and (max-width: 1100px) {
+    width: 100%;
     }
   }
 `;

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Card from "../Card";
 import ContactButton from "../ContactButton";
 import { navigateAndScrollToElement } from "../../utils.js";
-import WHY_US_CARDS_DATA from "./whyUsCardsData.js";
+import WHY_US_DATA from "./whyUsData.js";
 import "./styles.css";
 
 const WhyUsCards = () => {
@@ -18,8 +18,10 @@ const WhyUsCards = () => {
   };
 
   return (
-    <div className="why-us-card-container">
-      {WHY_US_CARDS_DATA.map((cardData, index) => {
+  <div className="why-us-section">
+    <div className="why-us-title">Why us?</div>
+    <div className="why-us-cards">
+      {WHY_US_DATA.map((cardData, index) => {
         const { icon, title, content, link } = cardData;
         return (
           <div key={index} className="why-us-card">
@@ -33,8 +35,9 @@ const WhyUsCards = () => {
           </div>
         );
       })}
-      <ContactButton />
     </div>
+    <ContactButton />
+  </div>
   );
 };
 
