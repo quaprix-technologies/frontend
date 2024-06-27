@@ -4,11 +4,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const ServiceSectionHeader = styled(AccordionSummary)`
   && {
-    background-color: #073e91;
+    background-color: ${props => props.theme.colors.darkBlue};
     transition: background-color 0.5s ease;
 
     &:hover {
-      background-color: #052e70;
+      background-color: ${props => props.theme.colors.blue3};
     }
   }
 `;
@@ -16,13 +16,13 @@ export const ServiceSectionHeader = styled(AccordionSummary)`
 export const ServiceSectionTitle = styled(Typography)`
   && {
     font-weight: 700;
-    color: white;
+    color: ${props => props.theme.colors.white};
   }
 `;
 
 export const ExpandIcon = styled(ExpandMoreIcon)`
   && {
-    color: white;
+    color: ${props => props.theme.colors.white};
   }
 `;
 

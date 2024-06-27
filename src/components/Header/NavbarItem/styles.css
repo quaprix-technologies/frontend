@@ -1,5 +1,5 @@
 .active {
-    color: #003493;
+    color: var(--blue1);
     text-decoration: underline 2px;
 }
 
@@ -11,6 +11,6 @@ header ul .navbar-item {
 }
 
 header ul .navbar-item:hover {
-    color: #003493;
+    color: var(--blue1);
     cursor: pointer;
 }

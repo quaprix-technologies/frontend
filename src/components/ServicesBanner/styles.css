@@ -8,8 +8,8 @@
 
    .service-banner h1 {
      margin-bottom: 50px;
-     box-shadow: #000;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+     box-shadow: var(--black);
+     text-shadow: 2px 2px 4px var(--blackRgb);
      font-size: 2rem;
    }
 

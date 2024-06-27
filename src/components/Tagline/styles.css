@@ -18,7 +18,7 @@
 .tagline h1 {
   font-size: 4rem;
   font-weight: bold;
-  color: rgb(56, 53, 53);
+  color: var(--darkGreyRgbAlt);
   margin: 0;
 }
 

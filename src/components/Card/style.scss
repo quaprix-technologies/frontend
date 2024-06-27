@@ -1,12 +1,12 @@
 .card {
   width: 100%;
   height: 100%;
-  border: 3px solid #aaa;
+  border: 3px solid var(--mediumGrey);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px var(--blackRgb);
   padding: 24px;
 }
 
@@ -29,7 +29,7 @@
 
   .card-title {
     font-size: 2rem;
-    color: #333;
+    color: var(--darkGrey);
     text-align: center;
     font-weight: bold;
     align-content: center;
@@ -43,7 +43,7 @@
 
   & p {
     text-align: center;
-    color: #393939;
+    color: var(--darkGreyAlt);
   }
 
   .card-link-label {
@@ -55,7 +55,7 @@
     text-decoration: underline;
 
     &:hover {
-      color: #11016e;
+      color: var(--blue6);
       text-decoration: none;
     }
   }
