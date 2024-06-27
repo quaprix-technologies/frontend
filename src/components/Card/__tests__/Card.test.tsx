@@ -53,9 +53,7 @@ describe('Card Component', () => {
     const { link, ...restProps } = mockProps;
     render(<Card {...restProps} />);
 
-    // Check that the link label element is not rendered
     const linkLabelElement = screen.queryByText(mockProps.link.label);
     expect(linkLabelElement).not.toBeInTheDocument();
   });
-
 });
