@@ -8,7 +8,7 @@ import {
   ServiceCardWrapper,
 } from "./style.ts";
 import Card from "../../../components/Card";
-import { scrollToElementWithTimeout } from "../../../utils.js";
+import { scrollToElementWithTimeout } from "../../../utils";
 import { serviceSections } from "../services-data.js";
 import { SERVICE_CARDS_CONTAINER_ID } from "../../../constants.js";
 
@@ -25,9 +25,8 @@ const ServiceSection = ({ id, title, rows, expanded, onClick }) => (
       {rows.map((row, index) => (
         <ServiceContentRow key={index}>
           {row.map((card, cardIndex) => (
-            <ServiceCardWrapper>
+            <ServiceCardWrapper key={cardIndex}>
               <Card
-                key={cardIndex}
                 icon={card.icon}
                 title={card.title}
                 content={card.content}
@@ -54,13 +53,11 @@ const ServiceCards = () => {
   useEffect(() => {
     if (hasInteracted) {
       return scrollToElementWithTimeout(
-        activeSectionId === null
-          ? SERVICE_CARDS_CONTAINER_ID
-          : activeSectionId,
+        activeSectionId === null ? SERVICE_CARDS_CONTAINER_ID : activeSectionId,
         400,
       );
     }
-  }, [activeSectionId]);
+  }, [activeSectionId, hasInteracted]);
 
   return (
     <div id={SERVICE_CARDS_CONTAINER_ID}>

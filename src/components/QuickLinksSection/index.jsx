@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { navigateAndScrollToTop } from "../../utils.js";
+import { navigateAndScrollToTop } from "../../utils";
 import {
   ABOUT_US_PAGE_PATH,
   CAREERS_PAGE_PATH,

@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-const Copyright : React.FC = () => {
+const Copyright: React.FC = () => {
   return (
     <div className="copyright-footer">
       <hr />

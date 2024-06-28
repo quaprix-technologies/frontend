@@ -4,7 +4,7 @@ import mailIcon from "../../assets/icons/mail-icon.png";
 import phoneIcon from "../../assets/icons/phone-icon.png";
 import "./styles.css";
 
-const ContactUsSection : React.FC = () => {
+const ContactUsSection: React.FC = () => {
   return (
     <div className="footer-section contact-section">
       <h4>CONTACT US</h4>

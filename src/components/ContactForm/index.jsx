@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import Form from "../Form";
 import getConfig from "../../config.js";
-import { constructFormData, getFormReceiverEmail } from "../../utils.js";
+import { constructFormData, getFormReceiverEmail } from "../../utils";
 import { CONTACT_FORM } from "../../constants.js";
 import "./styles.css";
 

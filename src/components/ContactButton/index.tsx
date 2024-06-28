@@ -12,7 +12,6 @@ const ContactButton: React.FC = () => {
       navigate,
       path: CONTACT_US_PAGE_PATH,
       elementId: CONTACT_US_CONTAINER_ID,
-      milliseconds: 500,
     });
   };
 

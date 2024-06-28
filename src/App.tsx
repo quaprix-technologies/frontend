@@ -20,7 +20,7 @@ import {
 
 type FullPageProps = {
   children: JSX.Element;
-}
+};
 
 const App: React.FC = () => {
   const FullPage: React.FC<FullPageProps> = ({ children }) => (

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AboutUsBanner from "../../components/AboutUsBanner";
 import AboutUsDescription from "../../components/AboutUsDescription";
-import { navigateAndScrollToElement } from "../../utils.js";
+import { navigateAndScrollToElement } from "../../utils";
 import { CONTACT_US_CONTAINER_ID, CONTACT_US_PAGE_PATH } from "../../constants";
 import "./styles.css";
 
