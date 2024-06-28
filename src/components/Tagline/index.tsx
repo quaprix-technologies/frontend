@@ -3,7 +3,7 @@ import quote_left from "../../assets/icons/quote-left.png";
 import points from "../../assets/icons/point.png";
 import "./styles.css";
 
-const Tagline = () => {
+const Tagline: React.FC = () => {
   return (
     <div className="tagline">
       <img className="quote" src={quote_left} alt="" />

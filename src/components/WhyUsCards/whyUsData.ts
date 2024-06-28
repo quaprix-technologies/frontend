@@ -6,7 +6,18 @@ import group_icon from "../../assets/icons/group.png";
 import mortarboard_icon from "../../assets/icons/mortarboard.png";
 import tech_icon from "../../assets/icons/coding.png";
 
-const WHY_US_DATA = [
+interface WHY_US_Items {
+  icon: string;
+  title: string;
+  content: string;
+  link?: {
+    label: string;
+    url: string;
+    elementId: string;
+  };
+}
+
+const WHY_US_DATA: WHY_US_Items[] = [
   {
     icon: group_icon,
     title: "Our Story",
