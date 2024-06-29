@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import OutsideClickHandler from "../OutsideClickHandler";
 import NavbarItem from "./NavbarItem";
-import { navigateAndScrollToTop } from "../../utils.js";
+import { navigateAndScrollToTop } from "../../utils";
 import {
   HOME_PAGE_PATH,
   SERVICES_PAGE_PATH,

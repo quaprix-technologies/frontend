@@ -2,11 +2,12 @@ import {
   SERVICES_PAGE_PATH,
   SERVICE_CARDS_CONTAINER_ID,
 } from "../../constants";
+import { WhyUsCardType } from "./types";
 import group_icon from "../../assets/icons/group.png";
 import mortarboard_icon from "../../assets/icons/mortarboard.png";
 import tech_icon from "../../assets/icons/coding.png";
 
-const WHY_US_DATA = [
+const WHY_US_CARDS_DATA: WhyUsCardType[] = [
   {
     icon: group_icon,
     title: "Our Story",
@@ -32,4 +33,4 @@ const WHY_US_DATA = [
   },
 ];
 
-export default WHY_US_DATA;
+export default WHY_US_CARDS_DATA;

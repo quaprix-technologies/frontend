@@ -1,9 +1,9 @@
-import React from "react";
-import { QUALITY_DYNAMICS_URL } from "../../constants.js";
+import { FC } from "react";
+import { QUALITY_DYNAMICS_URL } from "../../constants";
 import partner_icon from "../../assets/icons/partner-icon.png";
 import "./styles.css";
 
-const PartnersBanner = () => {
+const PartnersBanner: FC = () => {
   const handleOnClick = () => {
     window.open(QUALITY_DYNAMICS_URL, "_blank");
   };

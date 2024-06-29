@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -11,8 +11,8 @@ import instaIcon from "../../assets/icons/instagram.png";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import "./styles.css";
 
-const FollowUsSection = () => {
-  const handleOnClick = (url) => {
+const FollowUsSection: FC = () => {
+  const handleOnClick = (url: string) => {
     window.open(url, "_blank");
   };
 

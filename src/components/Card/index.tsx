@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import "./style.scss";
 
 type Props = {
@@ -11,11 +11,11 @@ type Props = {
     elementId: string;
   };
   onLinkClick?: (url: string, elementId: string) => void;
-}
+};
 
-const Card: React.FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
+const Card: FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
   const handleLinkClick = () => {
-    if(link && onLinkClick) {
+    if (link && onLinkClick) {
       onLinkClick(link.url, link.elementId);
     }
   };
@@ -24,9 +24,7 @@ const Card: React.FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
     <div className="card">
       <div className="card-header">
         {icon && <img src={icon} alt="icon" className="card-icon" />}
-        <div className="card-title">
-          {title}
-        </div>
+        <div className="card-title">{title}</div>
       </div>
       <div className="card-content">
         <p>{content}</p>

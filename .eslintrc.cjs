@@ -9,6 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'prettier',
   ],
@@ -31,10 +32,20 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-a11y/img-redundant-alt': 'off',
     'react/jsx-no-target-blank': 'warn',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    'no-unused-vars': ['warn', { varsIgnorePattern: '^React$' }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^(_|React$)",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     'prettier/prettier': 'warn',
     'jsx-a11y/anchor-is-valid': 'warn',
   },

@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Services from "./pages/Services";
@@ -20,10 +21,10 @@ import {
 
 type FullPageProps = {
   children: JSX.Element;
-}
+};
 
-const App: React.FC = () => {
-  const FullPage: React.FC<FullPageProps> = ({ children }) => (
+const App: FC = () => {
+  const FullPage: FC<FullPageProps> = ({ children }) => (
     <>
       <Header />
       {children}

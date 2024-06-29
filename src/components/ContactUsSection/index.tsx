@@ -1,10 +1,10 @@
-import React from "react";
+import { FC } from "react";
 import locationIcon from "../../assets/icons/location-icon.png";
 import mailIcon from "../../assets/icons/mail-icon.png";
 import phoneIcon from "../../assets/icons/phone-icon.png";
 import "./styles.css";
 
-const ContactUsSection = () => {
+const ContactUsSection: FC = () => {
   return (
     <div className="footer-section contact-section">
       <h4>CONTACT US</h4>
