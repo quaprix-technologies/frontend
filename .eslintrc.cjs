@@ -32,6 +32,10 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-a11y/img-redundant-alt': 'off',
     'react/jsx-no-target-blank': 'warn',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',

@@ -1,23 +1,13 @@
-import React from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "../Card";
 import ContactButton from "../ContactButton";
 import { navigateAndScrollToElement } from "../../utils";
-import WHY_US_DATA from "./whyUsData";
+import WHY_US_CARDS_DATA from "./whyUsData";
+import { WhyUsCardType } from "./types";
 import "./styles.css";
 
-interface CardData {
-  icon: string;
-  title: string;
-  content: string;
-  link?: {
-    label: string;
-    url: string;
-    elementId: string;
-  };
-}
-
-const WhyUsCards: React.FC = () => {
+const WhyUsCards: FC = () => {
   const navigate = useNavigate();
 
   const handleLinkClick = (url?: string, elementId?: string) => {
@@ -35,8 +25,8 @@ const WhyUsCards: React.FC = () => {
     <div className="why-us-section">
       <div className="why-us-title">Why us?</div>
       <div className="why-us-cards">
-        {WHY_US_DATA.map((cardData: CardData, index: number) => {
-          const { icon, title, content, link } = cardData;
+        {WHY_US_CARDS_DATA.map((card: WhyUsCardType, index: number) => {
+          const { icon, title, content, link } = card;
           return (
             <div key={index} className="why-us-card">
               <Card

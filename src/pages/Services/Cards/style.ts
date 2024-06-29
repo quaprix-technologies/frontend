@@ -4,7 +4,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const ServiceSectionHeader = styled(AccordionSummary)`
   && {
-    background-color: ${(props) => props.theme.colors.darkBlue};
+    background-color: ${(props) => props.theme.colors.blue5};
     transition: background-color 0.5s ease;
 
     &:hover {

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import "./style.scss";
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
   onLinkClick?: (url: string, elementId: string) => void;
 };
 
-const Card: React.FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
+const Card: FC<Props> = ({ icon, title, content, link, onLinkClick }) => {
   const handleLinkClick = () => {
     if (link && onLinkClick) {
       onLinkClick(link.url, link.elementId);

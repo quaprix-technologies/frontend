@@ -1,5 +1,6 @@
 import { NavigateFunction } from "react-router-dom";
 import getConfig from "./config.js";
+import { FormDataType } from "./types";
 import { CAREERS_FORM, CONTACT_FORM } from "./constants.js";
 
 export const constructFormData = ({
@@ -7,12 +8,7 @@ export const constructFormData = ({
   subject,
   text,
   file,
-}: {
-  to: string;
-  subject: string;
-  text: string;
-  file: Blob;
-}) => {
+}: FormDataType) => {
   const formData = new FormData();
   formData.append("to", to);
   formData.append("subject", subject);

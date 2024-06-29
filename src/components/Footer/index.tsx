@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import QuickLinksSection from "../QuickLinksSection";
 import FollowUsSection from "../FollowUsSection";
 import ContactUsSection from "../ContactUsSection";
@@ -7,7 +7,7 @@ import Copyright from "../Copyright";
 import logo from "../../assets/icons/quaprix-header.png";
 import "./styles.css";
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
   return (
     <div>
       <footer className="footer container">

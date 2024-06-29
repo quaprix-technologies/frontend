@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import quote_left from "../../assets/icons/quote-left.png";
 import points from "../../assets/icons/point.png";
 import "./styles.css";
 
-const Tagline: React.FC = () => {
+const Tagline: FC = () => {
   return (
     <div className="tagline">
       <img className="quote" src={quote_left} alt="" />

@@ -1,7 +1,7 @@
-import React from "react";
+import { FC } from "react";
 import "./styles.css";
 
-const AboutUsDescription: React.FC = () => {
+const AboutUsDescription: FC = () => {
   return (
     <div className="aboutus-text about-container">
       <h1>About Us</h1>
