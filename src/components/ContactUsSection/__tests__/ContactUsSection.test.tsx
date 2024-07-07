@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import ContactUsSection from "..";
 
 describe("ContactUsSection Component", () => {
-  it("render contact information correctly", () => {
+  it("renders the contact information correctly", () => {
     render(<ContactUsSection />);
 
     const contactUsText = screen.getByText("CONTACT US");

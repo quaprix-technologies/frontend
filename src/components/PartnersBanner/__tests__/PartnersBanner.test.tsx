@@ -3,11 +3,10 @@ import { render, screen } from "@testing-library/react";
 import PartnersBanner from "..";
 
 describe("PartnerBanner Component", () => {
-  it("render PartnerBanner correctly", () => {
+  it("renders the PartnerBanner correctly", () => {
     render(<PartnersBanner />);
-    const partnerHeading = screen.getByText("Our Partner");
-    expect(partnerHeading).toBeInTheDocument();
 
+    expect(screen.getByText("Our Partner")).toBeInTheDocument();
     const partnerIcon = screen.getByAltText("Partner Icon");
     expect(partnerIcon).toBeInTheDocument();
     expect(partnerIcon.tagName).toBe("IMG");

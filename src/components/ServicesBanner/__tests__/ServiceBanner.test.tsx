@@ -4,7 +4,7 @@ import { MemoryRouter } from "react-router-dom";
 import ServicesBanner from "..";
 
 describe("ServicesBanner Component", () => {
-  it("render ServicesBanner correctly", () => {
+  it("renders the ServicesBanner correctly", () => {
     render(
       <MemoryRouter>
         <ServicesBanner />

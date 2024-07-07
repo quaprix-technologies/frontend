@@ -3,12 +3,10 @@ import { render, screen } from "@testing-library/react";
 import Tagline from "..";
 
 describe("Tagline Component", () => {
-  it("render the Tagline Component correctly ", () => {
+  it("renders the Tagline Component correctly", () => {
     render(<Tagline />);
 
-    const taglineHrading = screen.getByText(/Your vision/);
-    expect(taglineHrading).toBeInTheDocument();
-
+    expect(screen.getByText(/Your vision/)).toBeInTheDocument();
     const quoteImage = screen.getByAltText("Left quotation mark");
     expect(quoteImage).toBeInTheDocument();
     expect(quoteImage.tagName).toBe("IMG");

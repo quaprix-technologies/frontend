@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Copyright from "..";
 
 describe("Copyright Component", () => {
-  it("render the Copyright correctly", () => {
+  it("renders the Copyright correctly", () => {
     render(<Copyright />);
 
     const hr = screen.getByRole("separator");
